@@ -130,17 +130,34 @@
         $_{user\_id, cryptoid} \mathcal{F}_{mathtt{Sum}(TotalCount)} (\\\rho_{user\_id, cryptoid/ TotalCount(A)} \cup \rho_{user\_id, cryptoid/ TotalCount(B)} )$
 
         \subsection{سوال 6}
-
+        $$\mathcal{F}_{\mathtt{Sum}(fee)}[\sigma_{Now-Date \geq "0000-00-30-00:00:00"}(Transactions)]$$
 
         \subsection{سوال 7}
 
+        \begin{latin}
+            
+            $A= \Pi_{cryptoid, in\_time\_price} (Cryptocurrency)$\\
+            $B=_{cryptoid} \mathcal{F}_{mathtt{max}(Date) as Date} (\sigma_{Transactions.Date - Now() \leq "0000-00-30-00:00:00"}\\(Transactions \rtimes Cryptocurrency))$\\
+            $C = \Pi_{cryptoid,fee} [Cryptocurrency \bowtie_{Cryptocurrency.id = Transactions.cryptoid} (Transactions \bowtie B)]$\\
+            $$\Pi_{cryptoid, in\_time\_price - fee} (A \bowtie) C$$
+        \end{latin}
+
 
         \subsection{سوال 8}
+
+        \begin{latin}
+            $A = _{owner\_id} \mathcal{F}_{\mathtt{Sum}(Total\_value) as sum} (Wallets)$\\
+            $B = \Pi_{owner\_id, cryptoid, Total\_value} (Wallets)$\\
+            $_{cryptoid}\mathcal{F}_{\mathtt{count}(owner\_id)} [\sigma_{percentage \geq 0.05} (\rho_{cryptoid, owner\_id, percentage}[\\\Pi_{cryptoid, owner\_id, \frac{Total\_value}{Sum}(A\bowtie B)}])]$
+        \end{latin}
 
 
         \subsection{سوال 9}
 
 
         \subsection{سوال 10}
+        $A = \rho_{cryptoid, price, totalSell} [_{cryptoid, price}\mathcal{F}_{\mathtt{Sum(amount)}}((Cryptocurrency \times prices) \\\bowtie_{Cryptocurrency.id = sellOrders.cryptoid} sellOrders)]$\\
+        $B = \rho_{cryptoid, price, totalSell} [_{cryptoid, price}\mathcal{F}_{\mathtt{Sum(amount)}}((Cryptocurrency \times prices) \\\bowtie_{Cryptocurrency.id = purchaseOrders.cryptoid} purchaseOrders)]$\\
+        $$A \cup B$$
 
 \end{document}

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.6.29)  22 MAY 2024 17:32
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.6.29)  22 MAY 2024 19:29
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -546,24 +546,54 @@ Overfull \hbox (19.28pt too wide) in paragraph at lines 80--80
 
 ]
 فصل 2.
-[7] [8
+[7] [8]
+فصل 3.
+
+Underfull \hbox (badness 10000) in paragraph at lines 130--131
+[][]
+ []
+
+[9
 
 ]
-فصل 3.
-[9] (./main.aux)
+Underfull \hbox (badness 10000) in paragraph at lines 132--135
+[][]
+ []
+
+
+Overfull \hbox (8.22542pt too wide) in paragraph at lines 143--146
+[]$\OML/cmm/m/it/10 B \OT1/cmr/m/n/10 =[] \OMS/cmsy/m/n/10 F[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ^^[[][] $[]
+ []
+
+
+Overfull \hbox (47.69681pt too wide) in paragraph at lines 143--146
+[]$\OML/cmm/m/it/10 C \OT1/cmr/m/n/10 = ^^E[][\OML/cmm/m/it/10 Cryptocurrency .[]/[] \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 Transactions .[]/$[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 143--146
+[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 163--165
+[][]
+ []
+
+[10] (./main.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: A58ED7D86B7D84D5F646834CA76F270F;2627.
+(rerunfilecheck)             Checksum: 26E8E0E5D8E32EBFF2D1CAE9F77C9281;2719.
  ) 
 Here is how much of TeX's memory you used:
- 13859 strings out of 475882
- 278038 string characters out of 5806027
+ 13866 strings out of 475882
+ 278187 string characters out of 5806027
  720518 words of memory out of 5000000
- 34667 multiletter control sequences out of 15000+600000
- 476219 words of font info for 87 fonts, out of 8000000 for 9000
+ 34671 multiletter control sequences out of 15000+600000
+ 476731 words of font info for 91 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  74i,11n,87p,1107b,368s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.xdv (9 pages, 59308 bytes).
+Output written on main.xdv (10 pages, 68872 bytes).

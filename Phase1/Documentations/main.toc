@@ -7,6 +7,7 @@
 \contentsline {subsection}{\numberline {1.2.2}\lr {User}}{7}{subsection.2.2.1}%
 \contentsline {subsection}{\numberline {2.2.2}\lr {Wallet}}{7}{subsection.2.2.2}%
 \contentsline {subsection}{\numberline {3.2.2}\lr {Transactions}}{7}{subsection.2.2.3}%
+\contentsline {subsection}{\numberline {4.2.2}\lr {Market}}{8}{subsection.2.2.4}%
 \contentsline {chapter}{\numberline {3}سوالات جبر رابطه‌ای}{9}{chapter.3}%
 \contentsline {section}{\numberline {1.3}شرح}{9}{section.3.1}%
 \contentsline {section}{\numberline {2.3}پاسخ به سوالات}{9}{section.3.2}%
@@ -14,9 +15,9 @@
 \contentsline {subsection}{\numberline {2.2.3}سوال 2}{9}{subsection.3.2.2}%
 \contentsline {subsection}{\numberline {3.2.3}سوال 3}{9}{subsection.3.2.3}%
 \contentsline {subsection}{\numberline {4.2.3}سوال 4}{9}{subsection.3.2.4}%
-\contentsline {subsection}{\numberline {5.2.3}سوال 5}{9}{subsection.3.2.5}%
-\contentsline {subsection}{\numberline {6.2.3}سوال 6}{9}{subsection.3.2.6}%
-\contentsline {subsection}{\numberline {7.2.3}سوال 7}{9}{subsection.3.2.7}%
-\contentsline {subsection}{\numberline {8.2.3}سوال 8}{9}{subsection.3.2.8}%
-\contentsline {subsection}{\numberline {9.2.3}سوال 9}{9}{subsection.3.2.9}%
-\contentsline {subsection}{\numberline {10.2.3}سوال 10}{9}{subsection.3.2.10}%
+\contentsline {subsection}{\numberline {5.2.3}سوال 5}{10}{subsection.3.2.5}%
+\contentsline {subsection}{\numberline {6.2.3}سوال 6}{10}{subsection.3.2.6}%
+\contentsline {subsection}{\numberline {7.2.3}سوال 7}{10}{subsection.3.2.7}%
+\contentsline {subsection}{\numberline {8.2.3}سوال 8}{10}{subsection.3.2.8}%
+\contentsline {subsection}{\numberline {9.2.3}سوال 9}{10}{subsection.3.2.9}%
+\contentsline {subsection}{\numberline {10.2.3}سوال 10}{10}{subsection.3.2.10}%

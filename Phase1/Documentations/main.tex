@@ -1,0 +1,99 @@
+\documentclass{book}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{fontspec}
+\usepackage{xepersian}
+
+\def\ojoin{\setbox0=\hbox{$\bowtie$}%
+  \rule[-.02ex]{.25em}{.4pt}\llap{\rule[\ht0]{.25em}{.4pt}}}
+\def\leftouterjoin{\mathbin{\ojoin\mkern-5.8mu\bowtie}}
+\def\rightouterjoin{\mathbin{\bowtie\mkern-5.8mu\ojoin}}
+\def\fullouterjoin{\mathbin{\ojoin\mkern-5.8mu\bowtie\mkern-5.8mu\ojoin}}
+
+\makeatletter
+\renewcommand\thesection{\@arabic\c@section.\@arabic\c@chapter}
+\makeatother
+\makeatletter
+\renewcommand\thesubsection{\@arabic\c@subsection.\@arabic\c@section.\@arabic\c@chapter}
+\makeatother
+
+\newcommand{\subtitle}[1]{%
+  \posttitle{%
+    \par\large\textbf{#1}\vskip0.5em}%
+}
+
+\settextfont{x-nima.ttf}
+
+\title{{\normalsize{دانشگاه صنعتی شریف}} \\ \vspace{1cm}
+    پروژه‌ی صرافی ارز دیجیتال: پایگاه داده \\ \large{استاد: دکتر مهدی آخی}}
+\date{بهار 1403}
+\author{
+  مانی ابراهیمی\\
+  \texttt{401170491}
+  \and
+  محمدامین حیدری\\
+  \texttt{401170553}
+  \and
+  محمد جعفری‌پور\\
+  \texttt{401105797}
+}
+
+\begin{document}
+    \maketitle
+    \newpage
+    
+    \tableofcontents
+    \newpage
+
+        \chapter{دیاگرام های \lr{ER}}
+        \section{شرح}
+        در این بخش تلاش بر این بود که کلیت پایگاه داده‌ی مورد نظر را با استفاده از دیاگرام‌های \lr{ER} نمایش دهیم. ابتدا دیاگرام \lr{ER} اصلی را نمایش داده‌ایم و سپس به تفکیک بخش‌های مختلف آن پرداخته‌ایم.
+        \section{توضیح هر موجودیت}
+        در ادامه، برای هر موجودیت حاضر در این دیاگرام توضیحی آمده:
+
+        \subsection{\lr{User}}
+        موجودیت کاربر یا همان \lr{user}، که دارای صفات گفته شده از جمله نام و نام خانوادگی و شناسه ملی و شماره تماس و ایمیل و رمز عبور و سایر موارد است. این موجودیت برای کاربران اصلی‌ترین موجودیت بوده چرا که اطلاعات خود هر کاربر را در این موجودیت ذخیره می‌کنیم. همچنین به یک موجودیت کیف پول متصل است که باعث می‌شود هر کاربر یک کیف پول داشته باشد.
+
+        \subsection{\lr{Wallet}}
+        موجودیت کیف پول یا همان \lr{wallet}، که دارای صفات گفته شده از جمله موجودیت کاربر و موجودی و ارز و سایر موارد است. این موجودیت برای ذخیره‌ی اطلاعات مربوط به کیف پول هر کاربر استفاده می‌شود. همچنین به یک موجودیت تراکنش متصل است که باعث می‌شود هر کیف پول دارای تراکنش باشد.
+
+        \subsection{\lr{Transactions}}
+        موجودیت تراکنش یا همان \lr{transactions}، که دارای صفات گفته شده از جمله موجودیت کیف پول و نوع تراکنش و مبلغ و تاریخ و سایر موارد است. این موجودیت برای ذخیره‌ی اطلاعات مربوط به تراکنش‌های هر کیف پول استفاده می‌شود.
+
+
+        \chapter{سوالات جبر رابطه‌ای}
+        \section{شرح}
+        در این بخش پاسخ به 10 سوال جبر رابطه‌ای\footnote{\lr{Relational Algebra}} آمده است.
+        \section{پاسخ به سوالات}
+        \subsection{سوال 1}
+
+
+        \subsection{سوال 2}
+
+
+        \subsection{سوال 3}
+
+
+        \subsection{سوال 4}
+
+
+        \subsection{سوال 5}
+
+
+        \subsection{سوال 6}
+
+
+        \subsection{سوال 7}
+
+
+        \subsection{سوال 8}
+
+
+        \subsection{سوال 9}
+
+
+        \subsection{سوال 10}
+
+\end{document}

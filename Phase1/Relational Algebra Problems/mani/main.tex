@@ -1,6 +1,16 @@
 \documentclass{report}
 
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
 \usepackage{xepersian}
+
+\def\ojoin{\setbox0=\hbox{$\bowtie$}%
+  \rule[-.02ex]{.25em}{.4pt}\llap{\rule[\ht0]{.25em}{.4pt}}}
+\def\leftouterjoin{\mathbin{\ojoin\mkern-5.8mu\bowtie}}
+\def\rightouterjoin{\mathbin{\bowtie\mkern-5.8mu\ojoin}}
+\def\fullouterjoin{\mathbin{\ojoin\mkern-5.8mu\bowtie\mkern-5.8mu\ojoin}}
+
 
 \settextfont{x-nima.ttf}
 
@@ -8,6 +18,9 @@
     \begin{enumerate}
         \item {
             \input{sols/sol-1.tex}
+        }
+        \item {
+            \input{sols/sol-2.tex}
         }
     \end{enumerate}
 \end{document}

@@ -1,0 +1,3 @@
+$\Pi_{user\_id, Sum(in\,time\,price)}((Users \fullouterjoin_{Users.user\_id = Wallet.owner\_id} Wallet \\ \fullouterjoin_{Wallet.wallet\_address = WalletItems.wallet\_id}  WalletItems  \\ \fullouterjoin_{WalletItems.trans\_id = Transactions.trans\_id }Transactions \\ \fullouterjoin_{Transactions.market\_id = Market.market\_id})) \div \Pi_{user\_id}(Users)$
+
+

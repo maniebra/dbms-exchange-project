@@ -1,18 +1,15 @@
 \documentclass{book}
 
-\usepackage{amsmath}
-\usepackage{amsfonts}
-\usepackage{amssymb}
+
 \usepackage{graphicx}
 \usepackage[hidelinks]{hyperref}
 \usepackage{fontspec}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
 \usepackage{xepersian}
 
-\def\ojoin{\setbox0=\hbox{$\bowtie$}%
-  \rule[-.02ex]{.25em}{.4pt}\llap{\rule[\ht0]{.25em}{.4pt}}}
-\def\leftouterjoin{\mathbin{\ojoin\mkern-5.8mu\bowtie}}
-\def\rightouterjoin{\mathbin{\bowtie\mkern-5.8mu\ojoin}}
-\def\fullouterjoin{\mathbin{\ojoin\mkern-5.8mu\bowtie\mkern-5.8mu\ojoin}}
+
 
 \makeatletter
 \renewcommand\thesection{\@arabic\c@section.\@arabic\c@chapter}
@@ -44,6 +41,13 @@
   محمد جعفری‌پور\\
   {401105797}
 }
+
+
+\def\ojoin{\setbox0=\hbox{$\bowtie$}%
+  \rule[-.02ex]{.25em}{.4pt}\llap{\rule[\ht0]{.25em}{.4pt}}}
+\def\leftouterjoin{\mathbin{\ojoin\mkern-5.8mu\bowtie}}
+\def\rightouterjoin{\mathbin{\bowtie\mkern-5.8mu\ojoin}}
+\def\fullouterjoin{\mathbin{\ojoin\mkern-5.8mu\bowtie\mkern-5.8mu\ojoin}}
 
 \begin{document}
     \maketitle
@@ -96,6 +100,9 @@
         \section{پاسخ به سوالات}
         \subsection{سوال 1}
 
+        $\Pi_{market\_id, fee}(Transactions \\ \bowtie_{Transactions.market\_id = Market.market\_id \land Transactions.date = date}(\\
+        _{market\_id}\mathcal{F}_{\min (date)} (\\
+        Market \bowtie_{Market.market\_id = Transactions.market\_id} Transactions)))$
 
         \subsection{سوال 2}
 

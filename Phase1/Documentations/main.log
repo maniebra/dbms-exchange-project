@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.6.29)  22 MAY 2024 12:26
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.6.29)  22 MAY 2024 12:35
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -96,78 +96,206 @@ LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 ) (c:/texlive/2022/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
+) (c:/texlive/2022/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+ (c:/texlive/2022/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks21
+) (c:/texlive/2022/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
+ (c:/texlive/2022/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+) (c:/texlive/2022/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: xetex.def on input line 107.
+ (c:/texlive/2022/texmf-dist/tex/latex/graphics-def/xetex.def
+File: xetex.def 2022/04/16 v5.0m Graphics/color driver for xetex
+))
+\Gin@req@height=\dimen148
+\Gin@req@width=\dimen149
+) (c:/texlive/2022/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2022-06-20 v7.00s Hypertext links for LaTeX
+ (c:/texlive/2022/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
+) (c:/texlive/2022/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2022/02/03 v1.0f TeX engine tests
+) (c:/texlive/2022/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO)
+ (c:/texlive/2022/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode not found.
+) (c:/texlive/2022/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
+) (c:/texlive/2022/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+) (c:/texlive/2022/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+) (c:/texlive/2022/texmf-dist/tex/latex/hycolor/hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+) (c:/texlive/2022/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty
+Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
+) (c:/texlive/2022/texmf-dist/tex/latex/auxhook/auxhook.sty
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+) (c:/texlive/2022/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2022-05-17 v2.50 Cross-referencing by name of section
+ (c:/texlive/2022/texmf-dist/tex/latex/refcount/refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+) (c:/texlive/2022/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+ (c:/texlive/2022/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+))
+\c@section@level=\count268
+)
+\@linkdim=\dimen150
+\Hy@linkcounter=\count269
+\Hy@pagecounter=\count270
+ (c:/texlive/2022/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2022-06-20 v7.00s Hyperref: PDFDocEncoding definition (HO)
+) (c:/texlive/2022/texmf-dist/tex/generic/intcalc/intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+) (c:/texlive/2022/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+)
+\Hy@SavedSpaceFactor=\count271
+ (c:/texlive/2022/texmf-dist/tex/latex/hyperref/puenc.def
+File: puenc.def 2022-06-20 v7.00s Hyperref: PDF Unicode definition (HO)
+)
+Package hyperref Info: Hyper figures OFF on input line 4162.
+Package hyperref Info: Link nesting OFF on input line 4167.
+Package hyperref Info: Hyper index ON on input line 4170.
+Package hyperref Info: Plain pages OFF on input line 4177.
+Package hyperref Info: Backreferencing OFF on input line 4182.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4408.
+\c@Hy@tempcnt=\count272
+ (c:/texlive/2022/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip17
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 4746.
+\XeTeXLinkMargin=\dimen151
+ (c:/texlive/2022/texmf-dist/tex/generic/bitset/bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+ (c:/texlive/2022/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
+))
+\Fld@menulength=\count273
+\Field@Width=\dimen152
+\Fld@charsize=\dimen153
+Package hyperref Info: Hyper figures OFF on input line 6024.
+Package hyperref Info: Link nesting OFF on input line 6029.
+Package hyperref Info: Hyper index ON on input line 6032.
+Package hyperref Info: backreferencing OFF on input line 6039.
+Package hyperref Info: Link coloring OFF on input line 6044.
+Package hyperref Info: Link coloring with OCG OFF on input line 6049.
+Package hyperref Info: PDF/A mode OFF on input line 6054.
+ (c:/texlive/2022/texmf-dist/tex/latex/base/atbegshi-ltx.sty
+Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
+package with kernel methods
+)
+\Hy@abspage=\count274
+\c@Item=\count275
+\c@Hfootnote=\count276
+)
+Package hyperref Info: Driver (autodetected): hxetex.
+ (c:/texlive/2022/texmf-dist/tex/latex/hyperref/hxetex.def
+File: hxetex.def 2022-06-20 v7.00s Hyperref driver for XeTeX
+ (c:/texlive/2022/texmf-dist/tex/generic/stringenc/stringenc.sty
+Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO)
+)
+\pdfm@box=\box53
+\c@Hy@AnnotLevel=\count277
+\HyField@AnnotCount=\count278
+\Fld@listcount=\count279
+\c@bookmark@seq@number=\count280
+ (c:/texlive/2022/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
+ (c:/texlive/2022/texmf-dist/tex/latex/base/atveryend-ltx.sty
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend package
+with kernel methods
+) (c:/texlive/2022/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 286.
+)
+\Hy@SectionHShift=\skip52
 ) (c:/texlive/2022/texmf-dist/tex/latex/fontspec/fontspec.sty (c:/texlive/2022/texmf-dist/tex/latex/l3packages/xparse/xparse.sty (c:/texlive/2022/texmf-dist/tex/latex/l3kernel/expl3.sty
 Package: expl3 2022-06-16 L3 programming layer (loader) 
  (c:/texlive/2022/texmf-dist/tex/latex/l3backend/l3backend-xetex.def
 File: l3backend-xetex.def 2022-04-20 L3 backend support: XeTeX
-\g__graphics_track_int=\count268
-\l__pdf_internal_box=\box53
-\g__pdf_backend_object_int=\count269
-\g__pdf_backend_annotation_int=\count270
-\g__pdf_backend_link_int=\count271
+\g__graphics_track_int=\count281
+\l__pdf_internal_box=\box54
+\g__pdf_backend_object_int=\count282
+\g__pdf_backend_annotation_int=\count283
+\g__pdf_backend_link_int=\count284
 ))
 Package: xparse 2022-06-22 L3 Experimental document command parser
 )
 Package: fontspec 2022/01/15 v2.8a Font selection for XeLaTeX and LuaLaTeX
  (c:/texlive/2022/texmf-dist/tex/latex/fontspec/fontspec-xetex.sty
 Package: fontspec-xetex 2022/01/15 v2.8a Font selection for XeLaTeX and LuaLaTeX
-\l__fontspec_script_int=\count272
-\l__fontspec_language_int=\count273
-\l__fontspec_strnum_int=\count274
-\l__fontspec_tmp_int=\count275
-\l__fontspec_tmpa_int=\count276
-\l__fontspec_tmpb_int=\count277
-\l__fontspec_tmpc_int=\count278
-\l__fontspec_em_int=\count279
-\l__fontspec_emdef_int=\count280
-\l__fontspec_strong_int=\count281
-\l__fontspec_strongdef_int=\count282
-\l__fontspec_tmpa_dim=\dimen148
-\l__fontspec_tmpb_dim=\dimen149
-\l__fontspec_tmpc_dim=\dimen150
+\l__fontspec_script_int=\count285
+\l__fontspec_language_int=\count286
+\l__fontspec_strnum_int=\count287
+\l__fontspec_tmp_int=\count288
+\l__fontspec_tmpa_int=\count289
+\l__fontspec_tmpb_int=\count290
+\l__fontspec_tmpc_int=\count291
+\l__fontspec_em_int=\count292
+\l__fontspec_emdef_int=\count293
+\l__fontspec_strong_int=\count294
+\l__fontspec_strongdef_int=\count295
+\l__fontspec_tmpa_dim=\dimen154
+\l__fontspec_tmpb_dim=\dimen155
+\l__fontspec_tmpc_dim=\dimen156
  (c:/texlive/2022/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
 ) (c:/texlive/2022/texmf-dist/tex/latex/fontspec/fontspec.cfg))) (c:/texlive/2022/texmf-dist/tex/xelatex/xepersian/xepersian.sty
 Package: xepersian 2022/06/27 v24.6 Persian typesetting in XeLaTeX
  (c:/texlive/2022/texmf-dist/tex/xelatex/xepersian/xepersian-persiancal.sty
 Package: xepersian-persiancal 2012/07/25 v0.2 provides Persian calendar
-\XePersian@i=\count283
-\XePersian@y=\count284
-\XePersian@m=\count285
-\XePersian@d=\count286
-\XePersian@latini=\count287
-\XePersian@persiani=\count288
-\XePersian@latinii=\count289
-\XePersian@persianii=\count290
-\XePersian@latiniii=\count291
-\XePersian@persianiii=\count292
-\XePersian@latiniv=\count293
-\XePersian@persianiv=\count294
-\XePersian@latinv=\count295
-\XePersian@persianv=\count296
-\XePersian@latinvi=\count297
-\XePersian@persianvi=\count298
-\XePersian@latinvii=\count299
-\XePersian@persianvii=\count300
-\XePersian@latinviii=\count301
-\XePersian@persianviii=\count302
-\XePersian@latinix=\count303
-\XePersian@persianix=\count304
-\XePersian@latinx=\count305
-\XePersian@persianx=\count306
-\XePersian@latinxi=\count307
-\XePersian@persianxi=\count308
-\XePersian@latinxii=\count309
-\XePersian@persianxii=\count310
-\XePersian@persianxiii=\count311
-\XePersian@temp=\count312
-\XePersian@temptwo=\count313
-\XePersian@tempthree=\count314
-\XePersian@yModHundred=\count315
-\XePersian@thirtytwo=\count316
-\XePersian@dn=\count317
-\XePersian@sn=\count318
-\XePersian@mminusone=\count319
+\XePersian@i=\count296
+\XePersian@y=\count297
+\XePersian@m=\count298
+\XePersian@d=\count299
+\XePersian@latini=\count300
+\XePersian@persiani=\count301
+\XePersian@latinii=\count302
+\XePersian@persianii=\count303
+\XePersian@latiniii=\count304
+\XePersian@persianiii=\count305
+\XePersian@latiniv=\count306
+\XePersian@persianiv=\count307
+\XePersian@latinv=\count308
+\XePersian@persianv=\count309
+\XePersian@latinvi=\count310
+\XePersian@persianvi=\count311
+\XePersian@latinvii=\count312
+\XePersian@persianvii=\count313
+\XePersian@latinviii=\count314
+\XePersian@persianviii=\count315
+\XePersian@latinix=\count316
+\XePersian@persianix=\count317
+\XePersian@latinx=\count318
+\XePersian@persianx=\count319
+\XePersian@latinxi=\count320
+\XePersian@persianxi=\count321
+\XePersian@latinxii=\count322
+\XePersian@persianxii=\count323
+\XePersian@persianxiii=\count324
+\XePersian@temp=\count325
+\XePersian@temptwo=\count326
+\XePersian@tempthree=\count327
+\XePersian@yModHundred=\count328
+\XePersian@thirtytwo=\count329
+\XePersian@dn=\count330
+\XePersian@sn=\count331
+\XePersian@mminusone=\count332
 ) (c:/texlive/2022/texmf-dist/tex/xelatex/xepersian/xepersian-mathdigitspec.sty
 Package: xepersian-mathdigitspec 2022/05/20 v1.2.0 Unicode Persian math digits in XeLaTeX
 ) (c:/texlive/2022/texmf-dist/tex/xelatex/bidi/bidi.sty
@@ -200,82 +328,63 @@ Package: bidi 2022/06/27 v38.4 Bidirectional typesetting in plain TeX and LaTeX
 * Primary author of bidi package: Vafa Khalighi.
 * 
 ****************************************************
-(c:/texlive/2022/texmf-dist/tex/generic/iftex/iftex.sty
-Package: iftex 2022/02/03 v1.0f TeX engine tests
-) (c:/texlive/2022/texmf-dist/tex/xelatex/bidi/biditools.sty
+(c:/texlive/2022/texmf-dist/tex/xelatex/bidi/biditools.sty
 Package: biditools 2022/06/15 v2.3 Programming tools for bidi package
-\@bidi@envbody=\toks21
-\@bidi@emptytoks=\toks22
-\bidi@poscount=\count320
-\bidi@tempcountb=\count321
-\bidi@temptoksa=\toks23
-\bidi@temptoksb=\toks24
-\bidi@dummies=\count322
-\bidi@are@these@correct=\toks25
-\bidi@toks@lista=\toks26
-\bidi@toks@listb=\toks27
-\bidi@stack@length=\count323
-\bidi@empty@stack=\toks28
-\bidi@looprepeat@depth=\count324
+\@bidi@envbody=\toks22
+\@bidi@emptytoks=\toks23
+\bidi@poscount=\count333
+\bidi@tempcountb=\count334
+\bidi@temptoksa=\toks24
+\bidi@temptoksb=\toks25
+\bidi@dummies=\count335
+\bidi@are@these@correct=\toks26
+\bidi@toks@lista=\toks27
+\bidi@toks@listb=\toks28
+\bidi@stack@length=\count336
+\bidi@empty@stack=\toks29
+\bidi@looprepeat@depth=\count337
 ) (c:/texlive/2022/texmf-dist/tex/latex/zref/zref-abspage.sty
 Package: zref-abspage 2022-04-07 v2.34 Module abspage for zref (HO)
  (c:/texlive/2022/texmf-dist/tex/latex/zref/zref-base.sty
 Package: zref-base 2022-04-07 v2.34 Module base for zref (HO)
- (c:/texlive/2022/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
-Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
-) (c:/texlive/2022/texmf-dist/tex/generic/infwarerr/infwarerr.sty
-Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
-) (c:/texlive/2022/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
-Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
-) (c:/texlive/2022/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
-Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
-) (c:/texlive/2022/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
-Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO)
-Package pdftexcmds Info: \pdf@primitive is available.
-Package pdftexcmds Info: \pdf@ifprimitive is available.
-Package pdftexcmds Info: \pdfdraftmode not found.
-) (c:/texlive/2022/texmf-dist/tex/generic/etexcmds/etexcmds.sty
-Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
-) (c:/texlive/2022/texmf-dist/tex/latex/auxhook/auxhook.sty
-Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
-)
 Package zref Info: New property list: main on input line 767.
 Package zref Info: New property: default on input line 768.
 Package zref Info: New property: page on input line 769.
-) (c:/texlive/2022/texmf-dist/tex/latex/base/atbegshi-ltx.sty
-Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
-package with kernel methods
 )
-\c@abspage=\count325
+\c@abspage=\count338
 Package zref Info: New property: abspage on input line 65.
 ) (c:/texlive/2022/texmf-dist/tex/latex/xkeyval/xkeyval.sty
 Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
  (c:/texlive/2022/texmf-dist/tex/generic/xkeyval/xkeyval.tex (c:/texlive/2022/texmf-dist/tex/generic/xkeyval/xkvutils.tex
-\XKV@toks=\toks29
-\XKV@tempa@toks=\toks30
- (c:/texlive/2022/texmf-dist/tex/generic/xkeyval/keyval.tex))
-\XKV@depth=\count326
+\XKV@toks=\toks30
+\XKV@tempa@toks=\toks31
+)
+\XKV@depth=\count339
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 ))
 \@bidi@copyins@=\insert252
  (c:/texlive/2022/texmf-dist/tex/xelatex/bidi/latex-xetex-bidi.def
 File: latex-xetex-bidi.def 2022/06/27 v1.4.8 bidi adaptations for `latex.ltx' for XeTeX engine
-\bidi@n@everypar=\toks31
-\bidi@column@check@number=\count327
+\bidi@n@everypar=\toks32
+\bidi@column@check@number=\count340
  (c:/texlive/2022/texmf-dist/tex/xelatex/bidi/footnote-xetex-bidi.def
 File: footnote-xetex-bidi.def 2017/08/09 v1.1 bidi footnote macros for XeTeX engine
-\c@footdir@label=\count328
-\footdir@toks=\toks32
+\c@footdir@label=\count341
+\footdir@toks=\toks33
 ) (c:/texlive/2022/texmf-dist/tex/xelatex/bidi/book-xetex-bidi.def
 File: book-xetex-bidi.def 2017/06/09 v1.0 bidi adaptations for standard book class for XeTeX engine
 ) (c:/texlive/2022/texmf-dist/tex/xelatex/bidi/amsmath-xetex-bidi.def
 File: amsmath-xetex-bidi.def 2020/05/16 v1.2 bidi adaptations for amsmath package for XeTeX engine
 ) (c:/texlive/2022/texmf-dist/tex/xelatex/bidi/amstext-xetex-bidi.def
 File: amstext-xetex-bidi.def 2016/09/12 v0.2 bidi adaptations for amstext package for XeTeX engine
+) (c:/texlive/2022/texmf-dist/tex/xelatex/bidi/graphicx-xetex-bidi.def
+File: graphicx-xetex-bidi.def 2017/06/17 v0.5 bidi adaptations for graphicx package for XeTeX engine
+) (c:/texlive/2022/texmf-dist/tex/xelatex/bidi/hyperref-xetex-bidi.def
+File: hyperref-xetex-bidi.def 2018/11/11 v1.1 bidi adaptations for hyperref package for XeTeX engine
 )) (c:/texlive/2022/texmf-dist/tex/xelatex/bidi/loadingorder-xetex-bidi.def
 File: loadingorder-xetex-bidi.def 2017/12/29 v0.97 making sure that bidi is the last package loaded
 )
-\bidi@digits=\count329
+\bidi@digits=\count342
 \bidi@digits@charclass=\XeTeXcharclass1
 \bidi@sepmark@charclass=\XeTeXcharclass2
 )
@@ -304,13 +413,17 @@ File: loadingorder-xetex-bidi.def 2017/12/29 v0.97 making sure that bidi is the 
 * Primary author of xepersian package: Vafa Khalighi.
 * 
 ****************************************************
-\xepersian@tcl=\count330
-\xepersian@ilg=\dimen151
-\xepersian@strutilg=\dimen152
+\xepersian@tcl=\count343
+\xepersian@ilg=\dimen157
+\xepersian@strutilg=\dimen158
 (c:/texlive/2022/texmf-dist/tex/xelatex/xepersian/loadingorder-xepersian.def
 File: loadingorder-xepersian.def 2018/09/29 v0.5 making sure that xepersian is the last package loaded
 ) (c:/texlive/2022/texmf-dist/tex/xelatex/xepersian/footnote-xepersian.def
 File: footnote-xepersian.def 2017/08/09 v0.6 footnote macros for xepersian package
+) (c:/texlive/2022/texmf-dist/tex/xelatex/xepersian/hyperref-xepersian.def
+File: hyperref-xepersian.def 2022/06/10 v0.7 xepersian adaptations for hyperref package
+) (c:/texlive/2022/texmf-dist/tex/xelatex/xepersian/url-xepersian.def
+File: url-xepersian.def 2022/02/18 v0.1 adaptations for url package
 ) (c:/texlive/2022/texmf-dist/tex/xelatex/xepersian/book-xepersian.def
 File: book-xepersian.def 2010/07/25 v0.2 adaptations for standard book class
 )
@@ -363,31 +476,42 @@ Package fontspec Info: Font family 'x-nima.ttf(0)' created for font
  (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 43.
-LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 43.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 47.
+LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 47.
  (c:/texlive/2022/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 44.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+Package hyperref Info: Link coloring OFF on input line 47.
+ (./main.out) (./main.out)
+\@outlinefile=\write3
+\openout3 = `main.out'.
+
+File: Logo BOW.png Graphic file (type bmp)
+<Logo BOW.png>
+LaTeX Font Info:    Trying to load font information for U+msa on input line 49.
  (c:/texlive/2022/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 44.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 49.
  (c:/texlive/2022/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
@@ -396,18 +520,18 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ]
 
 LaTeX Font Warning: Font shape `TU/x-nima.ttf(0)/m/sl' undefined
-(Font)              using `TU/x-nima.ttf(0)/m/n' instead on input line 47.
+(Font)              using `TU/x-nima.ttf(0)/m/n' instead on input line 51.
 
 [2
 
 ]
 
 LaTeX Font Warning: Font shape `TU/x-nima.ttf(0)/b/n' undefined
-(Font)              using `TU/x-nima.ttf(0)/m/n' instead on input line 47.
+(Font)              using `TU/x-nima.ttf(0)/m/n' instead on input line 51.
 
 (./main.toc)
-\tf@toc=\write3
-\openout3 = `main.toc'.
+\tf@toc=\write4
+\openout4 = `main.toc'.
 
  [3] [4
 
@@ -421,14 +545,16 @@ LaTeX Font Warning: Font shape `TU/x-nima.ttf(0)/b/n' undefined
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: 842CCFE6B4CA27CEEBD5801F99645947;2217.
  ) 
 Here is how much of TeX's memory you used:
- 7005 strings out of 475882
- 171828 string characters out of 5806027
- 604789 words of memory out of 5000000
- 27923 multiletter control sequences out of 15000+600000
- 475843 words of font info for 84 fonts, out of 8000000 for 9000
+ 13846 strings out of 475882
+ 277687 string characters out of 5806027
+ 719726 words of memory out of 5000000
+ 34657 multiletter control sequences out of 15000+600000
+ 476195 words of font info for 84 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 86i,8n,97p,1107b,278s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 74i,8n,87p,1107b,368s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.xdv (7 pages, 35184 bytes).
+Output written on main.xdv (7 pages, 41912 bytes).

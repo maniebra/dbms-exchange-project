@@ -105,16 +105,29 @@
         Market \bowtie_{Market.market\_id = Transactions.market\_id} Transactions)))$
 
         \subsection{سوال 2}
-        $_{owner\_id}\mathcal{F}_{\mathtt{Sum}(total\_value \times in\_time\_price)} [ Wallets \bowtie_{Market.market\_id = id} Markets]$
+        $$_{owner\_id}\mathcal{F}_{\mathtt{Sum}(total\_value \times in\_time\_price)} [ Wallets \bowtie_{Market.market\_id = id} Markets]$$
 
         \subsection{سوال 3}
-        $_{crypto\_id} \mathcal{F}_{\mathtt{Count}(order\_id)} [\sigma_{fill = "false"} (Orders)]$
+        $$_{crypto\_id} \mathcal{F}_{\mathtt{Count}(order\_id)} [\sigma_{fill = "false"} (Orders)]$$
 
         \subsection{سوال 4}
+
+        $A = \rho_{user\_id, total}[ _{owner\_id} \mathcal{F}_{\mathtt{Sum}(fee) as totalSell} \newline( 
+            Transactions \bowtie_{Transactions.origin\_wallet\_id = wallets.id} Wallet
+        )]$\\
+        $B = \rho_{user\_id, total}[ _{owner\_id} \mathcal{F}_{\mathtt{Sum}(fee) as totalBuy} \newline( 
+            Transactions \bowtie_{Transactions.dest\_wallet\_id = wallets.id} Wallet
+        )]$
+        $$_{user\_id}\mathcal{F}_{\mathtt{Sum}(Total)}$$
 
 
         \subsection{سوال 5}
 
+        $A = _{user\_id, cryptoid} \mathcal{F}_{\mathtt{Count}(Transactions.id)}(\\(Users \times Cryptocurrency) \ltimes_{users.user\_id = Transactions.SellerID} \\Transactions)$\\
+
+        $B = _{user\_id, cryptoid} \mathcal{F}_{\mathtt{Count}(Transactions.id)}(\\(Users \times Cryptocurrency) \ltimes_{users.user\_id = Transactions.BuyerID}\\ Transactions)$\\
+        \quad\\
+        $_{user\_id, cryptoid} \mathcal{F}_{mathtt{Sum}(TotalCount)} (\\\rho_{user\_id, cryptoid/ TotalCount(A)} \cup \rho_{user\_id, cryptoid/ TotalCount(B)} )$
 
         \subsection{سوال 6}
 

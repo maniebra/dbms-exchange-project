@@ -18,3 +18,8 @@ In phase 1, we were required to draw some ERDs using [draw.io](https://draw.io) 
 ### Task list
 
 Our team's task list can be viewed at [this link](https://docs.google.com/spreadsheets/d/1x1Guh4HTWLyG9GTomZEtesp5cjIGez9m9Day3bS_kgM/edit?usp=sharing).
+
+
+### Documentation
+
+The documentation for the first phase is available at [`./Phase1/Documentation/main.pdf`](https://github.com/maniebra/dbms-exchange-project/blob/main/Phase1/Documentations/main.pdf)

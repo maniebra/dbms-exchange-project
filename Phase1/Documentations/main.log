@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.6.29)  24 MAY 2024 20:57
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.6.29)  24 MAY 2024 21:00
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -646,6 +646,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 230--232
 
 ]
 فصل 4.
+
+Overfull \hbox (0.42686pt too wide) in paragraph at lines 237--238
+[][]\TU/x-nima.ttf(0)/m/sl/10 در صورتی که در مشاهده‌ی این تصویر مشکل دارید، فایل []\TU/lmroman10-regular(0)/m/n/10 PDF[] \TU/x-nima.ttf(0)/m/sl/10 را با مرورگرهای []\TU/lmroman10-regular(0)/m/n/10 Edge[] \TU/x-nima.ttf(0)/m/sl/10 یا []\TU/lmroman10-regular(0)/m/n/10 Chrome[][]
+ []
+
 File: ./erds/erd.pdf Graphic file (type pdf)
 <use ./erds/erd.pdf>
 File: ./erds/erd.pdf Graphic file (type pdf)
@@ -675,6 +680,6 @@ Here is how much of TeX's memory you used:
  35999 multiletter control sequences out of 15000+600000
  476739 words of font info for 92 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 74i,17n,87p,1107b,531s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 74i,17n,87p,1107b,527s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.xdv (16 pages, 116632 bytes).
+Output written on main.xdv (16 pages, 117596 bytes).

@@ -7,6 +7,7 @@
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
+\usepackage{pdfpages}
 \usepackage{xepersian}
 
 
@@ -229,5 +230,6 @@
         $A = \rho_{cryptoid, price, totalSell} [_{cryptoid, price}\mathcal{F}_{\mathtt{Sum(amount)}}((Cryptocurrency \times prices) \\\bowtie_{Cryptocurrency.id = sellOrders.cryptoid} sellOrders)]$\\
         $B = \rho_{cryptoid, price, totalSell} [_{cryptoid, price}\mathcal{F}_{\mathtt{Sum(amount)}}((Cryptocurrency \times prices) \\\bowtie_{Cryptocurrency.id = purchaseOrders.cryptoid} purchaseOrders)]$\\
         $$A \cup B$$
-
+        
+        \includepdf[pages=-]{./erds/erd.pdf}
 \end{document}

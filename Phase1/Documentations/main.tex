@@ -149,7 +149,7 @@
 
 
     \subsection{\lr{Crypto Histories}}
-        تاریخچه‌ی تغییرات قیمت یک رمزارز است که زمان آن تغییر و مقدار و قیمت آن در آن زمان (قیمت همان قیمت لحظه‌ای مارکت است) نشان می‌دهد.
+        تاریخچه‌ی تغییرات قیمت یک رمزارز است که زمان آن تغییر و مقدار و قیمت آن در آن زمان (قیمت همان قیمت لحظه‌ای مارکت است) نشان می‌دهد. با انجام هر تراکنش یک \lr{CryptoHistory} جدید ایجاد می‌شود چرا که قیمت لحظه‌ای ارز تغییر می‌کند.
 
 
 
@@ -197,8 +197,8 @@
         \begin{latin}
             
             $A= \Pi_{cryptoid, in\_time\_price} (Cryptocurrency)$\\
-            $B=_{cryptoid} \mathcal{F}_{mathtt{max}(Date) as Date} (\sigma_{Transactions.Date - Now() \leq "0000-00-30-00:00:00"}\\(Transactions \rtimes Cryptocurrency))$\\
-            $C = \Pi_{cryptoid,fee} [Cryptocurrency \bowtie_{Cryptocurrency.id = Transactions.cryptoid} (Transactions \bowtie B)]$\\
+            $B=_{cryptoid} \mathcal{F}_{mathtt{max}(Date) as Date} (\\\sigma_{Transactions.Date - Now() \leq "0000-00-30-00:00:00"}(Transactions \rtimes Cryptocurrency))$\\
+            $C = \Pi_{cryptoid,fee} [Cryptocurrency \bowtie_{Cryptocurrency.id Transactions.cryptoid} (\\Transactions \bowtie B)]$
             $$\Pi_{cryptoid, in\_time\_price - fee} (A \bowtie) C$$
         \end{latin}
 
@@ -213,6 +213,16 @@
 
 
         \subsection{سوال 9}
+
+        \begin{latin}
+            $A = \Pi_{user\_id, Date} (\sigma_{Date - Now() \leq "0000-00-30;00:00:00"}(Online\_Payments))$\\
+            $B = \rho_{user\_id, paymentDate}(A) \bowtie WalletHistories$\\
+            $C =_{cryptoid, user\_id, paymentDate}\mathcal{F}_{\mathtt{Max}(Date)} (\sigma_{Date < paymentDate}(B))$\\
+            $\rho_{user_id, paymentDate}(A) \times CryptoHistories$\\
+            $E = _{cryptoid, user\_id, paymentDate}\mathcal{F}_{\mathtt{max}(Date)}(\sigma_{Date < paymentDate} (D))$\\
+            $X = _{user\_id, paymentDate}\mathcal{F}_{\mathtt{Sum}(amount \times price) as totalValue} ((C \times WalletHistories) \\\bowtie_{user\_id = user\_id \land paymentDate = paymentDate} E \bowtie CryptoHistories) \\\bowtie_{user\_id = user\_id \land paymentDate = paymentDate} Online\_Payments$\\
+            $$\mathcal{F}_{\mathtt{CountUnique(user\_id)}}(\sigma_{onlineamount \geq \frac{1}{5} totalValue} (X))$$
+        \end{latin}
 
 
         \subsection{سوال 10}

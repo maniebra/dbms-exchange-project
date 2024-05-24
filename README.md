@@ -1,7 +1,7 @@
 # DBMS Exchange Project
 A crypto exchange project for the SUT's DBMS course, spring 2024, taught by @mahdiAkhi
 
-## Team Members
+## Team #14's Members
 
 | Member | STDID |
 | -----  | ----- |

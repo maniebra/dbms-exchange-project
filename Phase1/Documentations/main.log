@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.6.29)  24 MAY 2024 20:39
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.6.29)  24 MAY 2024 20:42
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -596,20 +596,20 @@ LaTeX Font Warning: Font shape `TU/x-nima.ttf(0)/m/sl' undefined
 LaTeX Font Warning: Font shape `TU/x-nima.ttf(0)/b/n' undefined
 (Font)              using `TU/x-nima.ttf(0)/m/n' instead on input line 57.
 
-(./main.toc)
+(./main.toc [3])
 \tf@toc=\write4
 \openout4 = `main.toc'.
 
- [3] [4
-
-]
+ [4]
 فصل 1.
 
 Overfull \hbox (19.28pt too wide) in paragraph at lines 81--81
 [][]\TU/lmroman10-regular(0)/m/n/7 https://docs.google.com/spreadsheets/d/1x1Guh4HTWLyG9GTomZEtesp5cjIGez9m9Day3bS_kgM/edit?usp=sharing[] []
  []
 
-[5] [6
+[5
+
+] [6
 
 ]
 فصل 2.
@@ -642,7 +642,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 230--232
 [][]
  []
 
-[12]
+[12] [13] [14
+
+]
+فصل 4.
 File: ./erds/erd.pdf Graphic file (type pdf)
 <use ./erds/erd.pdf>
 File: ./erds/erd.pdf Graphic file (type pdf)
@@ -651,19 +654,19 @@ File: ./erds/erd.pdf Graphic file (type pdf)
 <use ./erds/erd.pdf, page 1>
 File: ./erds/erd.pdf Graphic file (type pdf)
 <use ./erds/erd.pdf, page 1>
- [13]
+[15]
 File: ./erds/erd.pdf Graphic file (type pdf)
 <use ./erds/erd.pdf, page 1>
 File: ./erds/erd.pdf Graphic file (type pdf)
 <use ./erds/erd.pdf, page 1>
 File: ./erds/erd.pdf Graphic file (type pdf)
 <use ./erds/erd.pdf, page 1>
- [14] (./main.aux)
+ [16] (./main.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 3CD1B91F7CE32A8980A90C0A73F3E2D3;3770.
+(rerunfilecheck)             Checksum: A2F97C27F2E3AD3912DA0E75F88DFEEC;3989.
  ) 
 Here is how much of TeX's memory you used:
  15246 strings out of 475882
@@ -674,4 +677,4 @@ Here is how much of TeX's memory you used:
  1348 hyphenation exceptions out of 8191
  74i,17n,87p,1107b,531s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.xdv (14 pages, 114140 bytes).
+Output written on main.xdv (16 pages, 116632 bytes).

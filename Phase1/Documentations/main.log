@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.6.29)  22 MAY 2024 19:30
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.6.29)  24 MAY 2024 12:35
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -549,34 +549,34 @@ Overfull \hbox (19.28pt too wide) in paragraph at lines 80--80
 [7] [8]
 فصل 3.
 
-Underfull \hbox (badness 10000) in paragraph at lines 134--135
+Underfull \hbox (badness 10000) in paragraph at lines 166--167
 [][]
  []
 
 [9
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 136--139
+Underfull \hbox (badness 10000) in paragraph at lines 168--171
 [][]
  []
 
 
-Overfull \hbox (8.22542pt too wide) in paragraph at lines 147--150
+Overfull \hbox (8.22542pt too wide) in paragraph at lines 179--182
 []$\OML/cmm/m/it/10 B \OT1/cmr/m/n/10 =[] \OMS/cmsy/m/n/10 F[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ^^[[][] $[]
  []
 
 
-Overfull \hbox (47.69681pt too wide) in paragraph at lines 147--150
+Overfull \hbox (47.69681pt too wide) in paragraph at lines 179--182
 []$\OML/cmm/m/it/10 C \OT1/cmr/m/n/10 = ^^E[][\OML/cmm/m/it/10 Cryptocurrency .[]/[] \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 Transactions .[]/$[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 147--150
+Underfull \hbox (badness 10000) in paragraph at lines 179--182
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 167--169
+Underfull \hbox (badness 10000) in paragraph at lines 199--201
 [][]
  []
 
@@ -585,15 +585,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 167--169
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: F707B96E39D5FF5BD25A0C0146DB7B4F;3005.
+(rerunfilecheck)             Checksum: 9968A9992DF8919F0F9F8A15EE567F2F;3347.
  ) 
 Here is how much of TeX's memory you used:
  13866 strings out of 475882
  278187 string characters out of 5806027
- 722518 words of memory out of 5000000
+ 723518 words of memory out of 5000000
  34671 multiletter control sequences out of 15000+600000
  476731 words of font info for 91 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  74i,11n,87p,1107b,368s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.xdv (10 pages, 72868 bytes).
+Output written on main.xdv (10 pages, 92928 bytes).

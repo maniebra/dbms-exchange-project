@@ -2,7 +2,11 @@
 
 DROP TABLE IF EXISTS users CASCADE;
 DROP TABLE IF EXISTS cryptocurrencies CASCADE;
+DROP TABLE IF EXISTS wallets CASCADE;
 DROP TABLE IF EXISTS networks CASCADE;
+DROP TABLE IF EXISTS brokers CASCADE;
+DROP TABLE IF EXISTS markets CASCADE;
+DROP TABLE IF EXISTS transactions CASCADE;
 
 -- CREATE NEW TABLES
 
@@ -34,4 +38,44 @@ CREATE TABLE networks (
 	crypto_id INT,
 	CONSTRAINT crypto_fk FOREIGN KEY (crypto_id) REFERENCES cryptocurrencies(crypto_id)
 );
-								
+
+CREATE TABLE wallets (
+	owner_id INT,
+	crypto_id INT,
+	free_value BIGINT,
+	locked_value BIGINT,
+	CONSTRAINT owner_fk FOREIGN KEY (owner_id) REFERENCES users(user_id),
+	CONSTRAINT crypto_fk FOREIGN KEY (crypto_id) REFERENCES cryptocurrencies(crypto_id)
+);
+ALTER TABLE ONLY wallets ADD CONSTRAINT "wallets_key" PRIMARY KEY (crypto_id, owner_id);
+
+CREATE TABLE brokers (
+	broker_id SERIAL PRIMARY KEY
+);
+
+CREATE TABLE markets (
+	market_id SERIAL PRIMARY KEY,
+	broker_id INT,
+	base_currency_id INT, 
+	crypto_id INT,
+	fee BIGINT,
+	wage BIGINT,
+	CONSTRAINT broker_fk FOREIGN KEY (broker_id) REFERENCES brokers(broker_id),
+	CONSTRAINT base_currency_fk FOREIGN KEY (base_currency_id) REFERENCES cryptocurrencies(crypto_id),
+	CONSTRAINT crypto_fk FOREIGN KEY (crypto_id) REFERENCES cryptocurrencies(crypto_id)
+);
+
+CREATE TABLE transactions (
+	transaction_id SERIAL PRIMARY KEY,
+	crypto_id INT,
+	source_wallet_id INT,
+	destination_wallet_id INT,
+	fill BIGINT,
+	wage BIGINT,
+	date TIMESTAMP,
+	market_id INT,
+	CONSTRAINT source_wallet_fk FOREIGN KEY (source_wallet_id) REFERENCES cryptocurrencies(crypto_id),
+	CONSTRAINT destination_wallet_fk FOREIGN KEY (destination_wallet_id) REFERENCES cryptocurrencies(crypto_id),
+	CONSTRAINT crypto_fk FOREIGN KEY (crypto_id) REFERENCES cryptocurrencies(crypto_id),
+	CONSTRAINT market_fk FOREIGN KEY (market_id) REFERENCES markets(market_id)
+)

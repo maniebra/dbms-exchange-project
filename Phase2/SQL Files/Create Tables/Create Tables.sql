@@ -15,3 +15,12 @@ CREATE TABLE users (
 					is_admin BOOLEAN,
 					national_code BIGINT
 					);
+					
+CREATE TABLE cryptocurrencies (
+								crypto_id SERIAL PRIMARY KEY,
+								name TEXT,
+								total_amount BIGINT,
+								fixed_amount BIGINT,
+								fixed_value BIGINT,
+								);
+								

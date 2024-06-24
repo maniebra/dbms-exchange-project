@@ -1,6 +1,8 @@
 -- DROP ALL CURRENT TABLES (IF ANY) IN DATABASE
 
 DROP TABLE IF EXISTS users CASCADE;
+DROP TABLE IF EXISTS cryptocurrencies CASCADE;
+DROP TABLE IF EXISTS networks CASCADE;
 
 -- CREATE NEW TABLES
 
@@ -21,6 +23,15 @@ CREATE TABLE cryptocurrencies (
 								name TEXT,
 								total_amount BIGINT,
 								fixed_amount BIGINT,
-								fixed_value BIGINT,
+								fixed_value BIGINT
 								);
+								
+CREATE TABLE networks (
+	network_id SERIAL PRIMARY KEY,
+	wage BIGINT,
+	name TEXT,
+	time TIMESTAMP,
+	crypto_id INT,
+	CONSTRAINT crypto_fk FOREIGN KEY (crypto_id) REFERENCES cryptocurrencies(crypto_id)
+);
 								

@@ -127,6 +127,7 @@ CREATE TABLE orders (
 	type TEXT,
 	date TIMESTAMP,
 	market_id INT,
+	amount BIGINT,
 	CONSTRAINT market_fk FOREIGN KEY (market_id) REFERENCES markets(market_id),
 	CONSTRAINT client_fk FOREIGN KEY (client_id) REFERENCES users(user_id)
 );

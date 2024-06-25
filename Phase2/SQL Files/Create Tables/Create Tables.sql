@@ -11,6 +11,9 @@ DROP TABLE IF EXISTS wallet_transactions CASCADE;
 DROP TABLE IF EXISTS purchase_lists CASCADE;
 DROP TABLE IF EXISTS sales_lists CASCADE;
 DROP TABLE IF EXISTS orderbooks CASCADE;
+DROP TABLE IF EXISTS orders CASCADE;
+DROP TABLE IF EXISTS trades CASCADE;
+DROP TABLE IF EXISTS users_trades CASCADE;
 
 -- CREATE NEW TABLES
 
@@ -55,7 +58,8 @@ CREATE TABLE wallets (
 );
 
 CREATE TABLE brokers (
-	broker_id SERIAL PRIMARY KEY
+	broker_id SERIAL PRIMARY KEY,
+	name TEXT
 );
 
 CREATE TABLE markets (
@@ -112,4 +116,51 @@ CREATE TABLE orderbooks (
 	CONSTRAINT market_fk FOREIGN KEY (market_id) REFERENCES markets(market_id),
 	CONSTRAINT plist_fk FOREIGN KEY (list_id) REFERENCES purchase_lists(purchase_lists_id),
 	CONSTRAINT slist_fk FOREIGN KEY (list_id) REFERENCES sales_lists(sales_lists_id)
+);
+
+CREATE TABLE orders (
+	order_id SERIAL PRIMARY KEY,
+	is_sell BOOLEAN,
+	state TEXT,
+	fill BIGINT,
+	client_id INT,
+	type TEXT,
+	date TIMESTAMP,
+	market_id INT,
+	CONSTRAINT market_fk FOREIGN KEY (market_id) REFERENCES markets(market_id),
+	CONSTRAINT client_fk FOREIGN KEY (client_id) REFERENCES users(user_id)
+);
+
+CREATE TABLE trades (
+	trade_id SERIAL PRIMARY KEY,
+	date_placed TIMESTAMP,
+	fill BIGINT,
+	wage BIGINT,
+	value BIGINT,
+	min_fill_remainder BIGINT,
+	type TEXT,
+	list_id INT,
+	market_id INT,
+	taker_order_id INT,
+	maker_order_id INT,
+	taker_id INT,
+	maker_id INT,
+	broker_id INT,
+	admin_id INT,
+	CONSTRAINT market_fk FOREIGN KEY (market_id) REFERENCES markets(market_id),
+	CONSTRAINT plist_fk FOREIGN KEY (list_id) REFERENCES purchase_lists(purchase_lists_id),
+	CONSTRAINT slist_fk FOREIGN KEY (list_id) REFERENCES sales_lists(sales_lists_id),
+	CONSTRAINT maker_fk FOREIGN KEY (list_id) REFERENCES users(user_id),
+	CONSTRAINT taker_fk FOREIGN KEY (taker_id) REFERENCES users(user_id),
+	CONSTRAINT maker_order_fk FOREIGN KEY (taker_order_id) REFERENCES orders(order_id),
+	CONSTRAINT taker_order_fk FOREIGN KEY (taker_order_id) REFERENCES orders(order_id),
+	CONSTRAINT admin_fk FOREIGN KEY (admin_id) REFERENCES users(user_id),
+	CONSTRAINT broker_fk FOREIGN KEY (broker_id) REFERENCES brokers(broker_id)
+);
+
+CREATE TABLE users_trades (
+	trade_id INT,
+	user_id INT,
+	CONSTRAINT users_fk FOREIGN KEY (user_id) REFERENCES users(user_id),
+	CONSTRAINT trades_fk FOREIGN KEY (trade_id) REFERENCES trades(trade_id)
 );

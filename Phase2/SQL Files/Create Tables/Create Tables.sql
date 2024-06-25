@@ -7,6 +7,10 @@ DROP TABLE IF EXISTS networks CASCADE;
 DROP TABLE IF EXISTS brokers CASCADE;
 DROP TABLE IF EXISTS markets CASCADE;
 DROP TABLE IF EXISTS transactions CASCADE;
+DROP TABLE IF EXISTS wallet_transactions CASCADE;
+DROP TABLE IF EXISTS purchase_lists CASCADE;
+DROP TABLE IF EXISTS sales_lists CASCADE;
+DROP TABLE IF EXISTS orderbooks CASCADE;
 
 -- CREATE NEW TABLES
 
@@ -90,3 +94,22 @@ CREATE TABLE wallet_transactions (
 	CONSTRAINT transaction_fk FOREIGN KEY (transaction_id) REFERENCES transactions(transaction_id)
 );
 
+CREATE TABLE purchase_lists (
+	purchase_lists_id SERIAL PRIMARY KEY,
+	market_id INT,
+	CONSTRAINT market_fk FOREIGN KEY (market_id) REFERENCES markets(market_id)
+);
+
+CREATE TABLE sales_lists (
+	sales_lists_id SERIAL PRIMARY KEY,
+	market_id INT,
+	CONSTRAINT market_fk FOREIGN KEY (market_id) REFERENCES markets(market_id)
+);
+
+CREATE TABLE orderbooks (
+	market_id INT,
+	list_id INT,
+	CONSTRAINT market_fk FOREIGN KEY (market_id) REFERENCES markets(market_id),
+	CONSTRAINT plist_fk FOREIGN KEY (list_id) REFERENCES purchase_lists(purchase_lists_id),
+	CONSTRAINT slist_fk FOREIGN KEY (list_id) REFERENCES sales_lists(sales_lists_id)
+);

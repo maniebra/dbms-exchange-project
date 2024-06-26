@@ -11,11 +11,11 @@ INSERT INTO users(first_name, last_name, email, password, phone_number, address,
 	('Shirin', 'Ghazi', 'asale.lamasab@gmail.com', '54shir', '+989789034567', 'Isf, SepahanShahr', FALSE, 1148905481),
 	('Abool', 'Norian', 'reifgh.baz@gmail.com', '43abol21', '+989054321567', 'Isf, Badrood, Mahan', TRUE, 1118905481);
 	
-INSERT INTO cryptocurrencies (name, total_amount, fixed_amount, fixed_value) VALUES 
-	('rial', 10, 8, 7),
-	('dodge', 2, 1, 1),
-	('teter', 5, 3, 3),
-	('notcoin', 4, 2, 2);
+INSERT INTO cryptocurrencies (name, total_amount, fixed_amount, fixed_value, type) VALUES 
+	('rial', 10, 8, 7, 'nonstable'),
+	('dodge', 2, 1, 1, 'nonstable'),
+	('teter', 5, 3, 3, 'nonstable'),
+	('notcoin', 4, 2, 2, 'nonstable');
 	
 
 
@@ -102,21 +102,21 @@ INSERT INTO orderbooks (market_id ,list_id) VALUES
 	(7, 7);
 	
 INSERT INTO orders (sales_lists_id,purchase_lists_id,is_sell,state,fill,client_id,date,market_id,amount) VALUES
-	(1, NULL, TRUE, '', 2, 5, '2020-06-08', 1, 100),
-	(1, NULL, TRUE, '', 6, 6, '2021-06-08', 1, 50),
-	(3, NULL, TRUE, '', 8, 2, '2021-07-08', 3, 100),
-	(5, NULL, TRUE, '', 10, 2, '2023-06-08', 5,70),
-	(NULL, 3, FALSE, '', 2, 5, '2012-06-08', 3, 550),
-	(NULL, 3, FALSE, '', 3, 1, '2013-06-08', 3, 40),
-	(NULL, 1, FALSE, '', 4, 4, '2015-06-08', 1, 100),
-	(NULL, 5, FALSE, '', 4, 4, '2017-06-08', 5, 100);
+	(1, NULL, TRUE, 'end', 2, 5, '2020-06-08', 1, 100),
+	(1, NULL, TRUE, 'end', 6, 6, '2021-06-08', 1, 50),
+	(3, NULL, TRUE, 'fill', 8, 2, '2021-07-08', 3, 100),
+	(5, NULL, TRUE, 'fill', 10, 2, '2023-06-08', 5,70),
+	(NULL, 3, FALSE, 'fill', 2, 5, '2012-06-08', 3, 550),
+	(NULL, 3, FALSE, 'half_fill', 3, 1, '2013-06-08', 3, 40),
+	(NULL, 1, FALSE, 'new', 4, 4, '2015-06-08', 1, 100),
+	(NULL, 5, FALSE, 'new', 4, 4, '2017-06-08', 5, 100);
 	
 	
-INSERT INTO trades (date_placed,fill,wage,value,min_fill_remainder,type,list_id,market_id,taker_order_id,maker_order_id,taker_id,maker_id,broker_id,admin_id) VALUES 
-	('2021-10-08', 100, 2, 20, 100, 'p2p', 1, 1, 7, 1,4, 5, 1, null),
-	('2022-10-08', 40, 3, 20, 40, 'p2p', 3, 3, 6, 3,1, 2, 1, null),
-	('2022-11-08', 70, 5, 45, 70, 'p2p', 5, 5, 8, 4,4, 2, 2, null),
-	('2022-09-08', 550, 5, 40, 550, 'otc', 3, 3, 5, null,5, null, 1, 3);;
+INSERT INTO trades (date_placed,fill,wage,value,min_fill_remainder,type,market_id,taker_order_id,maker_order_id,taker_id,maker_id,broker_id,admin_id) VALUES 
+	('2021-10-08', 100, 2, 20, 100, 'p2p', 1, 7, 1,4, 5, 1, null),
+	('2022-10-08', 40, 3, 20, 40, 'p2p', 3, 6, 3,1, 2, 1, null),
+	('2022-11-08', 70, 5, 45, 70, 'p2p', 5, 8, 4,4, 2, 2, null),
+	('2022-09-08', 550, 5, 40, 550, 'otc', 3, 5, null,5, null, null, 3);;
 	
 
 INSERT INTO users_trades (trade_id, user_id ) VALUES

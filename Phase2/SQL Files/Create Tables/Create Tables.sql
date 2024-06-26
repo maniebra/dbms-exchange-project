@@ -17,7 +17,7 @@ DROP TABLE IF EXISTS users_trades CASCADE;
 DROP TYPE IF EXISTS origin_dest_enum CASCADE;
 -- CREATE NEW TABLES
 
-CREATE TABLE users (
+CREATE TABLE users (--check
 					user_id SERIAL PRIMARY KEY,
 					first_name TEXT,
 					last_name TEXT,
@@ -29,15 +29,16 @@ CREATE TABLE users (
 					national_code BIGINT
 					);
 					
-CREATE TABLE cryptocurrencies (
+CREATE TABLE cryptocurrencies (--check
 								crypto_id SERIAL PRIMARY KEY,
 								name TEXT,
 								total_amount BIGINT,
 								fixed_amount BIGINT,
-								fixed_value BIGINT
+								fixed_value BIGINT,
+								type TEXT
 								);
 								
-CREATE TABLE networks (
+CREATE TABLE networks (--check
 	network_id SERIAL PRIMARY KEY,
 	wage BIGINT,
 	name TEXT,
@@ -46,7 +47,7 @@ CREATE TABLE networks (
 	CONSTRAINT crypto_fk FOREIGN KEY (crypto_id) REFERENCES cryptocurrencies(crypto_id)
 );
 
-CREATE TABLE wallets (
+CREATE TABLE wallets (--check
 	wallet_id SERIAL PRIMARY KEY,
 	owner_id INT,
 	crypto_id INT,
@@ -54,15 +55,15 @@ CREATE TABLE wallets (
 	locked_value BIGINT,
 	CONSTRAINT owner_fk FOREIGN KEY (owner_id) REFERENCES users(user_id),
 	CONSTRAINT crypto_fk FOREIGN KEY (crypto_id) REFERENCES cryptocurrencies(crypto_id)
--- 	PRIMARY KEY (crypto_id, owner_id)
+-- 	PRIMARY KEY (crypto_id, owner_id)change of plans wallet is now a strong entity
 );
 
-CREATE TABLE brokers (
+CREATE TABLE brokers (--check
 	broker_id SERIAL PRIMARY KEY,
 	name TEXT
 );
 
-CREATE TABLE markets (
+CREATE TABLE markets (--check
 	market_id SERIAL PRIMARY KEY,
 	broker_id INT,
 	base_currency_id INT, 
@@ -74,7 +75,7 @@ CREATE TABLE markets (
 	CONSTRAINT crypto_fk FOREIGN KEY (crypto_id) REFERENCES cryptocurrencies(crypto_id)
 );
 
-CREATE TABLE transactions (
+CREATE TABLE transactions (--check
 	transaction_id SERIAL PRIMARY KEY,
 	crypto_id INT,
 	source_wallet_id INT,
@@ -90,7 +91,7 @@ CREATE TABLE transactions (
 );
 
 CREATE TYPE origin_dest_enum AS ENUM ('origin', 'dest');
-CREATE TABLE wallet_transactions (
+CREATE TABLE wallet_transactions (--check
 	wallet_id INT,
 	transaction_id INT,
 	origin_or_dest origin_dest_enum,
@@ -99,27 +100,29 @@ CREATE TABLE wallet_transactions (
 	CONSTRAINT transaction_fk FOREIGN KEY (transaction_id) REFERENCES transactions(transaction_id)
 );
 
-CREATE TABLE purchase_lists (
+CREATE TABLE purchase_lists (--check
 	purchase_lists_id SERIAL PRIMARY KEY,
 	market_id INT,
 	CONSTRAINT market_fk FOREIGN KEY (market_id) REFERENCES markets(market_id)
 );
 
-CREATE TABLE sales_lists (
+CREATE TABLE sales_lists (--check
 	sales_lists_id SERIAL PRIMARY KEY,
 	market_id INT,
 	CONSTRAINT market_fk FOREIGN KEY (market_id) REFERENCES markets(market_id)
 );
 
-CREATE TABLE orderbooks (
+CREATE TABLE orderbooks (--check--changed
 	market_id INT,
-	list_id INT,
+	purchase_list_id INT,
+	sales_list_id INT,
 	CONSTRAINT market_fk FOREIGN KEY (market_id) REFERENCES markets(market_id),
-	CONSTRAINT plist_fk FOREIGN KEY (list_id) REFERENCES purchase_lists(purchase_lists_id),
-	CONSTRAINT slist_fk FOREIGN KEY (list_id) REFERENCES sales_lists(sales_lists_id)
+	CONSTRAINT plist_fk FOREIGN KEY (purchase_list_id) REFERENCES purchase_lists(purchase_lists_id),
+	CONSTRAINT slist_fk FOREIGN KEY (sales_list_id) REFERENCES sales_lists(sales_lists_id),
+	CONSTRANT orderbook_pk PRIMARY KEY market_id
 );
 
-CREATE TABLE orders (
+CREATE TABLE orders (--check
 	order_id SERIAL PRIMARY KEY,
 	purchase_lists_id INT,
 	sales_lists_id INT,

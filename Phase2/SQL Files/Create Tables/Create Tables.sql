@@ -113,13 +113,12 @@ CREATE TABLE sales_lists (--check
 );
 
 CREATE TABLE orderbooks (--check--changed
-	market_id INT,
+	market_id INT PRIMARY KEY,
 	purchase_list_id INT,
 	sales_list_id INT,
 	CONSTRAINT market_fk FOREIGN KEY (market_id) REFERENCES markets(market_id),
 	CONSTRAINT plist_fk FOREIGN KEY (purchase_list_id) REFERENCES purchase_lists(purchase_lists_id),
-	CONSTRAINT slist_fk FOREIGN KEY (sales_list_id) REFERENCES sales_lists(sales_lists_id),
-	CONSTRANT orderbook_pk PRIMARY KEY market_id
+	CONSTRAINT slist_fk FOREIGN KEY (sales_list_id) REFERENCES sales_lists(sales_lists_id)
 );
 
 CREATE TABLE orders (--check

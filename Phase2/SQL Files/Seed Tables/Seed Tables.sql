@@ -1,22 +1,22 @@
 TRUNCATE users, cryptocurrencies, networks, wallets ,brokers,
 markets, transactions, wallet_transactions, orders,
 trades, users_trades, orderbooks, purchase_lists, sales_lists
-CASCADE;
+RESTART IDENTITY CASCADE;
 
+-- haroomzadeha inja ro namoosi nakonin
 INSERT INTO users(first_name, last_name, email, password, phone_number, address, is_admin, national_code) VALUES 
 	('Mahdi', 'Akhi', 'mahdi.akhi@gmail.com', 'Akhi1234', '+989021214455', 'Tehran, Azadi, Sharif', FALSE, 0058764541),
 	('Mohammad', 'Jafaripour', 'm.sws@gmail.com', 'MAMAli83', '+989051234567', 'Tehran, Shahrak Gharb, Shafagh', FALSE, 1278905481),
 	('Nima', 'Pasha', 'nim.pash@gmail.com', 'Pash222', '+989071434567', 'Tehran, Gisha, Azari', TRUE, 1278542481),
 	('Mohi', 'Heidari', 'mohitamiz@gmail.com', 'heidar31', '+9890512310964', 'Isf, Khominishahr', FALSE, 1284605481),
-	('Shirin', 'Ghazi', 'asale.lamasab@gmail.com', '54shir', '+989789034567', 'Isf, SepahanShahr', FALSE, 1148905481),
+	('Mamadali', 'Abam', 'abam@sharif.edu', 'abam1234', '+989123459876', 'Tehran, Sharif', FALSE, 0056769881),
 	('Abool', 'Norian', 'reifgh.baz@gmail.com', '43abol21', '+989054321567', 'Isf, Badrood, Mahan', TRUE, 1118905481);
 	
-INSERT INTO cryptocurrencies (name, total_amount, fixed_amount, fixed_value) VALUES 
-	('rial', 10, 8, 7),
-	('dodge', 2, 1, 1),
-	('teter', 5, 3, 3),
-	('notcoin', 4, 2, 2);
-	
+INSERT INTO cryptocurrencies (name, total_amount, fixed_amount, fixed_value, type) VALUES 
+	('rial', 10, 8, 7, 'stable'),
+	('dodge', 2, 1, 1, 'unstable'),
+	('teter', 5, 3, 3, 'stable'),
+	('notcoin', 4, 2, 2, 'unstable');
 
 
 INSERT INTO networks (wage, name, time, crypto_id) VALUES 
@@ -91,15 +91,14 @@ INSERT INTO purchase_lists (market_id) VALUES
 INSERT INTO sales_lists (market_id) VALUES
 	(1),(2),(3), (4), (5), (6), (7);
 
-INSERT INTO orderbooks (market_id ,list_id) VALUES
-	(1, 1),
-	(2, 2),
-	(3, 3),
-	(4, 4),
-	(5, 5),
-	(5, 5),
-	(6, 6),
-	(7, 7);
+INSERT INTO orderbooks (market_id ,purchase_list_id, sales_list_id) VALUES
+	(1, 1, 1),
+	(2, 2, 2),
+	(3, 3, 3),
+	(4, 4, 4),
+	(5, 5, 5),
+	(6, 6, 6),
+	(7, 7, 7);
 	
 INSERT INTO orders (sales_lists_id,purchase_lists_id,is_sell,state,fill,client_id,date,market_id,amount) VALUES
 	(1, NULL, TRUE, '', 2, 5, '2020-06-08', 1, 100),

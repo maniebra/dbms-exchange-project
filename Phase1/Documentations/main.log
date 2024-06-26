@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.6.25)  26 JUN 2024 19:24
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.6.25)  26 JUN 2024 20:33
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -718,7 +718,27 @@ File: ./erds/erd.pdf Graphic file (type pdf)
 فصل 6.
 
 
-[19] (./main.aux)
+[19]
+File: wallets_transactions.png Graphic file (type bmp)
+<wallets_transactions.png>
+
+
+[20]
+File: users_trades.png Graphic file (type bmp)
+<users_trades.png>
+
+
+[21]
+File: orders.png Graphic file (type bmp)
+<orders.png>
+
+
+[22]
+File: trades.png Graphic file (type bmp)
+<trades.png>
+
+
+[23] (./main.aux)
  ***********
 LaTeX2e <2024-06-01> patch level 1
 L3 programming layer <2024-05-27>
@@ -728,15 +748,15 @@ L3 programming layer <2024-05-27>
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 6C9325EC0525C1F31E4AC624E27F6F1E;5058.
+(rerunfilecheck)             Checksum: 8687DE65123E1BF80F824E40964B11E2;6466.
  ) 
 Here is how much of TeX's memory you used:
- 15462 strings out of 474256
- 301319 string characters out of 5746292
+ 15499 strings out of 474256
+ 302064 string characters out of 5746292
  1933560 words of memory out of 5000000
- 37834 multiletter control sequences out of 15000+600000
+ 37867 multiletter control sequences out of 15000+600000
  565549 words of font info for 100 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  86i,17n,99p,1047b,532s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.xdv (19 pages, 127212 bytes).
+Output written on main.xdv (23 pages, 144496 bytes).

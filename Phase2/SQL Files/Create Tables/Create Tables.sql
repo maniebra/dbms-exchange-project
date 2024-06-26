@@ -14,7 +14,7 @@ DROP TABLE IF EXISTS orderbooks CASCADE;
 DROP TABLE IF EXISTS orders CASCADE;
 DROP TABLE IF EXISTS trades CASCADE;
 DROP TABLE IF EXISTS users_trades CASCADE;
-
+DROP TYPE IF EXISTS origin_dest_enum CASCADE;
 -- CREATE NEW TABLES
 
 CREATE TABLE users (
@@ -89,10 +89,11 @@ CREATE TABLE transactions (
 	CONSTRAINT market_fk FOREIGN KEY (market_id) REFERENCES markets(market_id)
 );
 
-
+CREATE TYPE origin_dest_enum AS ENUM ('origin', 'dest');
 CREATE TABLE wallet_transactions (
 	wallet_id INT,
 	transaction_id INT,
+	origin_or_dest origin_dest_enum,
 	PRIMARY KEY(wallet_id, transaction_id),
 	CONSTRAINT wallet_fk FOREIGN KEY (wallet_id) REFERENCES wallets(wallet_id),
 	CONSTRAINT transaction_fk FOREIGN KEY (transaction_id) REFERENCES transactions(transaction_id)
@@ -120,16 +121,19 @@ CREATE TABLE orderbooks (
 
 CREATE TABLE orders (
 	order_id SERIAL PRIMARY KEY,
+	purchase_lists_id INT,
+	sales_lists_id INT,
 	is_sell BOOLEAN,
 	state TEXT,
 	fill BIGINT,
 	client_id INT,
-	type TEXT,
 	date TIMESTAMP,
 	market_id INT,
 	amount BIGINT,
 	CONSTRAINT market_fk FOREIGN KEY (market_id) REFERENCES markets(market_id),
-	CONSTRAINT client_fk FOREIGN KEY (client_id) REFERENCES users(user_id)
+	CONSTRAINT client_fk FOREIGN KEY (client_id) REFERENCES users(user_id),
+	CONSTRAINT sales_lists_fk FOREIGN KEY (sales_lists_id) REFERENCES sales_lists(sales_lists_id),
+	CONSTRAINT purchase_lists_fk FOREIGN KEY (purchase_lists_id) REFERENCES purchase_lists(purchase_lists_id)
 );
 
 CREATE TABLE trades (

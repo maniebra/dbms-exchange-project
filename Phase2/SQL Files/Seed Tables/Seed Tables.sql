@@ -156,48 +156,68 @@ INSERT INTO orderbooks (market_id ,purchase_list_id, sales_list_id) VALUES
 INSERT INTO orders (sales_lists_id,purchase_lists_id,is_sell,state,fill,client_id,date,market_id,amount) VALUES
 	(1, NULL, TRUE, 'end', 2, 5, '2020-06-08', 1, 100),
 	(2, NULL, TRUE, 'end', 6, 6, '2021-06-08', 2, 50),
-	(3, NULL, TRUE, 'fill', 8, 2, '2021-07-08', 3, 100),
-	(3, NULL, TRUE, 'fill', 10, 2, '2023-06-08', 3,70),
+	(6, NULL, TRUE, 'end', 8, 2, '2021-07-08', 6, 100),
+	(3, NULL, TRUE, 'end', 10, 2, '2023-06-08', 3,70),
 	(4, NULL, TRUE, 'end', 2, 5, '2020-06-08', 4, 100),
 	(5, NULL, TRUE, 'end', 6, 6, '2021-06-08', 5, 50),
-	(5, NULL, TRUE, 'fill', 8, 2, '2021-07-08', 5, 100),
-	(5, NULL, TRUE, 'fill', 10, 2, '2023-06-08', 5,70),
+	(5, NULL, TRUE, 'fill', 8, 3, '2021-07-08', 5, 100),
+	(5, NULL, TRUE, 'fill', 10, 1, '2023-06-08', 5,70),
 	
 	
-	(2,NULL, TRUE, 'end', 2, 5, '2020-06-08', 2 100),
+	(NULL,1, TRUE, 'end', 2, 3, '2020-06-08', 1, 100),
+	(NULL,2, TRUE, 'end', 6, 2, '2021-06-08', 2, 50),
+	(NULL,6, TRUE, 'end', 8, 1, '2021-07-08', 6, 100),
+	(NULL,3, TRUE, 'end', 10, 5, '2023-06-08', 3,70),
+	(NULL,7, TRUE, 'end', 2, 5, '2020-06-08', 7,550),
+	(NULL,3, TRUE, 'end', 6, 5, '2021-06-08', 3, 50),
+	(NULL,3, TRUE, 'fill', 8, 5, '2021-07-08',3,100),
+	(NULL,3, TRUE, 'fill', 10, 3, '2023-06-08', 3,70),
+	
+	
+	
+	
+	(2, NULL, TRUE, 'end', 2, 5, '2020-06-08', 2, 100),
 	(2, NULL, TRUE, 'end', 6, 6, '2021-06-08', 2, 50),
-	(6, NULL, TRUE, 'fill', 8, 2, '2021-07-08', 6 100),
-	(6, NULL, TRUE, 'fill', 10, 2, '2023-06-08', 6,70),
-	(7,NULL, TRUE, 'end', 2, 5, '2020-06-08', 7,100),
-	(3 NULL, TRUE, 'end', 6, 6, '2021-06-08', 3, 50),
-	(3,NULL, TRUE, 'fill', 8, 2, '2021-07-08',3,100),
-	(3,NULL, TRUE, 'fill', 10, 2, '2023-06-08', 3,70),
+	(2, NULL, TRUE, 'end', 8, 2, '2021-07-08', 2, 100),
+	(2, NULL, TRUE, 'end', 10, 2, '2023-06-08', 2,70),
+	(2, NULL, TRUE, 'end', 2, 5, '2020-06-08', 2, 100),
+	(2, NULL, TRUE, 'end', 6, 6, '2021-06-08', 2, 50),
+	(2, NULL, TRUE, 'fill', 8, 3, '2021-07-08', 2, 100),
+	(2, NULL, TRUE, 'fill', 10, 1, '2023-06-08', 2,70),
+	
+	
+	(NULL,2, TRUE, 'end', 2, 3, '2020-06-08', 2, 100),
+	(NULL,2, TRUE, 'end', 6, 2, '2021-06-08', 2, 50),
+	(NULL,2, TRUE, 'end', 8, 1, '2021-07-08', 2, 100),
+	(NULL,2, TRUE, 'end', 10, 5, '2023-06-08',2,70),
+	(NULL,2, TRUE, 'end', 2, 4, '2020-06-08', 2,100),
+	(NULL,2, TRUE, 'end', 6, 5, '2021-06-08', 2, 50),
+	(NULL,2, TRUE, 'fill', 8, 5, '2021-07-08',2,100),
+	(NULL,2, TRUE, 'fill', 10, 3, '2023-06-08', 2,70);	
 	
 	
 	
 	
 	
+
 	
 	
+INSERT INTO trades (date_placed,fill,wage,value,min_fill_remainder,type,market_id,
+					taker_order_id,maker_order_id,taker_id,maker_id,broker_id,admin_id) VALUES 
+	('2021-10-08', 100, 2, 20, 100, 'p2p', 1, 9, 1,5, 3, 1, null),
+	('2022-10-08', 50 , 3, 20, 50, 'p2p', 2, 10, 2,6, 2, 1, null),
+	('2022-11-08', 100 , 5, 45, 100, 'p2p', 6, 11, 3,2, 1, 1, null) ,
+	('2021-11-08', 70, 2, 20, 70, 'p2p', 7, 4, 12,2, 5, 1, null),
+	
+
 	
 	
-	
-	
-	(NULL, 3, FALSE, 'fill', 2, 5, '2012-06-08', 3, 550),
-	(NULL, 3, FALSE, 'half_fill', 3, 1, '2013-06-08',3,40),
-	(NULL, 1, FALSE, 'new', 4, 4, '2015-06-08', 1, 100),
-	(NULL, 5, FALSE, 'new', 4, 4, '2017-06-08', 5, 100),
-	
-	
-INSERT INTO trades (date_placed,fill,wage,value,min_fill_remainder,type,market_id,taker_order_id,maker_order_id,taker_id,maker_id,broker_id,admin_id) VALUES 
-	('2021-10-08', 100, 2, 20, 100, 'p2p', 1, 7, 1,4, 5, 1, null),
-	('2022-10-08', 40 , 3, 20, 40, 'p2p', 3, 6, 3,1, 2, 1, null) ,
-	('2022-11-08', 70 , 5, 45, 70, 'p2p', 5, 8, 4,4, 2, 2, null) ,
-	('2022-09-08', 550, 5, 40, 550, 'otc', 3, 5, null,5, null, null, 3);
+	('2022-09-08', 550, 5, 40, 550, 'otc', 3, 13, null,5, null, null, 3);
 	
 
 INSERT INTO users_trades (trade_id, user_id ) VALUES
-	(1, 4), (1, 5),
-	(2, 1), (2, 2),
-	(3, 4), (3, 2),
-	(4, 5), (4, 3);
+	(1, 5), (1,3),
+	(2, 6), (2, 2),
+	(3, 2), (3, 1),
+	(4, 2), (4, 5),
+	(5, 5);

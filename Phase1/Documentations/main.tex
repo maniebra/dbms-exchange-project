@@ -291,8 +291,12 @@ $$F.D = \{market\_id \rightarrow crypto\_id\}$$
 حال دو جدول ما دارای سومین فرم نرمال هستند که همانطور که میبینید جدول \lr{R} زیر مجموعه ای از جدول \lr{Markets} در پایگاه داده اصلی میباشد و نیازی به ساختن جدول اضافه نیست.
 
 
-\subsection{حذف \lr{list\_id} ها از \lr{orders}}
-\subsection{حذف \lr{maker\_id, taker\_id} از \lr{trades}}
+\subsection{حذف \lr{sales\_lists\_id , purchase\_list\_id} از \lr{orders}}
+$$orders(\underline{order\_id}, sales\_lists\_id,purchase\_lists\_id,is\_sell,state,fill,client\_id,$$
+$$date,market\_id,amount)$$
+$$F.D = \{order\_id \rightarrow all\,attributes, (market\_id , is\_sell) \rightarrow (sales\_lists\_id , purchase\_lists\_id)\}$$
+از انجایی که دو$(market\_id , is\_sell) \rightarrow (sales\_lists\_id , purchase\_lists\_id)$ دو \lr{non prime attribute} به یک \lr{non prime attribute} دیگر اشاره می‌کند، این دیپندنسی باعث می‌شود که جدول ما سومین فرم نرمال نباشد و ما باید ان را به یک جدول دیگر انتقال بدهیم.
+\subsection{حذف \lr{maker\_id , taker\_id} از \lr{trades}}
 \section{\lr{index}ها}
 برای سه جدول خود \lr{index} قرار دادیم تا در جستار ها به ما کمک بکند.
 \subsection{ایندکس تاریخ بر روی تبادل‌ها}

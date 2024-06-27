@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.6.25)  27 JUN 2024 23:43
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.6.25)  28 JUN 2024 00:42
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -763,20 +763,22 @@ Overfull \hbox (58.92105pt too wide) detected at line 297
  []
 
 
-Overfull \hbox (7.54388pt too wide) in paragraph at lines 297--299
-[]\TU/x-nima.ttf(0)/m/sl/10 از انجایی که دو$\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 market[]id; is[]sell\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ! \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 sales[]lists[]id; purchase[]lists[]id\OT1/cmr/m/n/10 )$ \TU/x-nima.ttf(0)/m/sl/10 دو []\TU/lmroman10-regular(0)/m/n/10 non prime[][]
+Overfull \hbox (7.20697pt too wide) in paragraph at lines 297--301
+[]\TU/x-nima.ttf(0)/m/sl/10 از انجایی که در$\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 market[]id; is[]sell\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ! \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 sales[]lists[]id; purchase[]lists[]id\OT1/cmr/m/n/10 )$ \TU/x-nima.ttf(0)/m/sl/10 دو []\TU/lmroman10-regular(0)/m/n/10 non prime[][]
  []
 
 
 
 [27]
-Overfull \hbox (22.5pt too wide) in paragraph at lines 308--308
+Overfull \hbox (22.5pt too wide) in paragraph at lines 324--324
 [][]    \TU/lmtt/m/n/10 CREATE INDEX IF NOT EXISTS date_placed_idx ON trades(date_placed);[] []
  []
 
 
 
-[28] (./main.aux)
+[28]
+
+[29] (./main.aux)
  ***********
 LaTeX2e <2024-06-01> patch level 1
 L3 programming layer <2024-05-27>
@@ -786,7 +788,7 @@ L3 programming layer <2024-05-27>
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 461BC95A5C2460A7C3365DAD13A90A70;8783.
+(rerunfilecheck)             Checksum: 61F9DADD0C77F8CE53AB77767A03F3ED;8740.
  ) 
 Here is how much of TeX's memory you used:
  15506 strings out of 474256
@@ -795,6 +797,6 @@ Here is how much of TeX's memory you used:
  37873 multiletter control sequences out of 15000+600000
  565557 words of font info for 101 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 86i,17n,99p,1047b,532s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 86i,17n,99p,1047b,560s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.xdv (28 pages, 182616 bytes).
+Output written on main.xdv (29 pages, 187260 bytes).

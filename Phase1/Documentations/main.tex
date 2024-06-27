@@ -295,8 +295,24 @@ $$F.D = \{market\_id \rightarrow crypto\_id\}$$
 $$orders(\underline{order\_id}, sales\_lists\_id,purchase\_lists\_id,is\_sell,state,fill,client\_id,$$
 $$date,market\_id,amount)$$
 $$F.D = \{order\_id \rightarrow all\,attributes, (market\_id , is\_sell) \rightarrow (sales\_lists\_id , purchase\_lists\_id)\}$$
-از انجایی که دو$(market\_id , is\_sell) \rightarrow (sales\_lists\_id , purchase\_lists\_id)$ دو \lr{non prime attribute} به یک \lr{non prime attribute} دیگر اشاره می‌کند، این دیپندنسی باعث می‌شود که جدول ما سومین فرم نرمال نباشد و ما باید ان را به یک جدول دیگر انتقال بدهیم.
-\subsection{حذف \lr{maker\_id , taker\_id} از \lr{trades}}
+\\
+از انجایی که در$(market\_id , is\_sell) \rightarrow (sales\_lists\_id , purchase\_lists\_id)$ دو \lr{non prime attribute} به دو  \lr{non prime attribute} دیگر اشاره می‌کند، این دیپندنسی باعث می‌شود که جدول ما سومین فرم نرمال نباشد و ما باید ان را به یک جدول دیگر انتقال بدهیم.
+\newline ما می‌توانیم $(market\_id , is\_sell) \rightarrow (sales\_lists\_id , purchase\_lists\_id)$ به دو رابطه‌ی $(market\_id , is\_sell) \rightarrow sales\_lists\_id$ و $(market\_id , is\_sell) \rightarrow purchase\_lists\_id$ بشکانیم و با فرض اینکه \lr{is\_sell} یک \lr{boolean} با دو مقدار می باشد، دو جدول برای روابط بالا بسازیم
+
+$$orders(\underline{order\_id},is\_sell,state,fill,client\_id,date,market\_id,amount)$$
+$$F.D = \{order\_id \rightarrow all\,attributes\}$$
+
+$$is\_sell\,==\,TRUE:sale\_table(\underline{market\_id}, sales\_lists\_id)$$
+$$F.D = \{market\_id \rightarrow sales\_lists\_id\}$$
+
+$$is\_sell\,==\,FALSE:purchase\_table(\underline{market\_id}, purchase\_lists\_id)$$
+$$F.D = \{market\_id \rightarrow purchase\_lists\_id\}$$
+
+همانطور که می دانیم دو جدول جدید ایجاد شده هر دو زیر مجموعه‌ای از جدول \lr{Orderbooks} می‌باشند و ما فقط باید دو ستون از جدول سفارشات حذف کنیم.
+
+
+\subsection{نرمال کردن جدول \lr{trades}}
+
 \section{\lr{index}ها}
 برای سه جدول خود \lr{index} قرار دادیم تا در جستار ها به ما کمک بکند.
 \subsection{ایندکس تاریخ بر روی تبادل‌ها}

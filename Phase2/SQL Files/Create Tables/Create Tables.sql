@@ -119,7 +119,6 @@ CREATE TABLE orderbooks (--check--changed
 	CONSTRAINT market_fk FOREIGN KEY (market_id) REFERENCES markets(market_id),
 	CONSTRAINT plist_fk FOREIGN KEY (purchase_list_id) REFERENCES purchase_lists(purchase_lists_id),
 	CONSTRAINT slist_fk FOREIGN KEY (sales_list_id) REFERENCES sales_lists(sales_lists_id)
-
 );
 
 CREATE TABLE orders (--check
@@ -147,6 +146,7 @@ CREATE TABLE trades (
 	value BIGINT,
 	min_fill_remainder BIGINT,
 	type TEXT,
+	list_id INT,
 	market_id INT,
 	taker_order_id INT,
 	maker_order_id INT,
@@ -155,9 +155,11 @@ CREATE TABLE trades (
 	broker_id INT,
 	admin_id INT,
 	CONSTRAINT market_fk FOREIGN KEY (market_id) REFERENCES markets(market_id),
-	CONSTRAINT maker_fk FOREIGN KEY (maker_id) REFERENCES users(user_id),
+	CONSTRAINT plist_fk FOREIGN KEY (list_id) REFERENCES purchase_lists(purchase_lists_id),
+	CONSTRAINT slist_fk FOREIGN KEY (list_id) REFERENCES sales_lists(sales_lists_id),
+	CONSTRAINT maker_fk FOREIGN KEY (list_id) REFERENCES users(user_id),
 	CONSTRAINT taker_fk FOREIGN KEY (taker_id) REFERENCES users(user_id),
-	CONSTRAINT maker_order_fk FOREIGN KEY (taker_order_id) REFERENCES orders(order_id),
+	CONSTRAINT maker_order_fk FOREIGN KEY (maker_order_id) REFERENCES orders(order_id),
 	CONSTRAINT taker_order_fk FOREIGN KEY (taker_order_id) REFERENCES orders(order_id),
 	CONSTRAINT admin_fk FOREIGN KEY (admin_id) REFERENCES users(user_id),
 	CONSTRAINT broker_fk FOREIGN KEY (broker_id) REFERENCES brokers(broker_id)
@@ -166,6 +168,7 @@ CREATE TABLE trades (
 CREATE TABLE users_trades (
 	trade_id INT,
 	user_id INT,
+	PRIMARY KEY(trade_id, user_id),
 	CONSTRAINT users_fk FOREIGN KEY (user_id) REFERENCES users(user_id),
 	CONSTRAINT trades_fk FOREIGN KEY (trade_id) REFERENCES trades(trade_id)
 );

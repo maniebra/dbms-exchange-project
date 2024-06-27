@@ -44,7 +44,10 @@
 \contentsline {chapter}{\numberline {7}ساخت پایگاه داده}{25}{chapter.7}%
 \contentsline {chapter}{\numberline {8}بهبود پایگاه داده}{27}{chapter.8}%
 \contentsline {section}{\numberline {1.8}نرمال‌تر سازی}{27}{section.8.1}%
+\contentsline {subsection}{\numberline {1.1.8}حذف \lr {crypto\_id} از \lr {transactions}}{27}{subsection.8.1.1}%
+\contentsline {subsection}{\numberline {2.1.8}حذف \lr {list\_id} ها از \lr {orders}}{27}{subsection.8.1.2}%
+\contentsline {subsection}{\numberline {3.1.8}حذف \lr {maker\_id, taker\_id} از \lr {trades}}{27}{subsection.8.1.3}%
 \contentsline {section}{\numberline {2.8}\lr {index}ها}{27}{section.8.2}%
-\contentsline {subsection}{\numberline {1.2.8}ایندکس تاریخ بر روی تبادل‌ها}{27}{subsection.8.2.1}%
-\contentsline {subsection}{\numberline {2.2.8}ایندکس کیف پول بر روی تراکنش‌ها}{27}{subsection.8.2.2}%
-\contentsline {subsection}{\numberline {3.2.8}ایندکس قیمت بر روی سفارش‌ها}{27}{subsection.8.2.3}%
+\contentsline {subsection}{\numberline {1.2.8}ایندکس تاریخ بر روی تبادل‌ها}{28}{subsection.8.2.1}%
+\contentsline {subsection}{\numberline {2.2.8}ایندکس کیف پول بر روی تراکنش‌ها}{28}{subsection.8.2.2}%
+\contentsline {subsection}{\numberline {3.2.8}ایندکس قیمت بر روی سفارش‌ها}{28}{subsection.8.2.3}%

@@ -164,14 +164,14 @@ INSERT INTO orders (sales_lists_id,purchase_lists_id,is_sell,state,fill,client_i
 	(5, NULL, TRUE, 'fill', 10, 1, '2023-06-08', 5,70),
 	
 	
-	(NULL,1, TRUE, 'end', 2, 3, '2020-06-08', 1, 100),
-	(NULL,2, TRUE, 'end', 6, 2, '2021-06-08', 2, 50),
-	(NULL,6, TRUE, 'end', 8, 1, '2021-07-08', 6, 100),
-	(NULL,3, TRUE, 'end', 10, 5, '2023-06-08', 3,70),
-	(NULL,7, TRUE, 'end', 2, 5, '2020-06-08', 7,550),
-	(NULL,3, TRUE, 'end', 6, 5, '2021-06-08', 3, 50),
-	(NULL,3, TRUE, 'fill', 8, 5, '2021-07-08',3,100),
-	(NULL,3, TRUE, 'fill', 10, 3, '2023-06-08', 3,70),
+	(NULL,1, FALSE, 'end', 2, 3, '2020-06-08', 1, 100),
+	(NULL,2, FALSE, 'end', 6, 2, '2021-06-08', 2, 50),
+	(NULL,6, FALSE, 'end', 8, 1, '2021-07-08', 6, 100),
+	(NULL,3, FALSE, 'end', 10, 5, '2023-06-08', 3,70),
+	(NULL,7, FALSE, 'end', 2, 5, '2020-06-08', 7,550),
+	(NULL,3, FALSE, 'end', 6, 5, '2021-06-08', 3, 50),
+	(NULL,3, FALSE, 'fill', 8, 5, '2021-07-08',3,100),
+	(NULL,3, FALSE, 'fill', 10, 3, '2023-06-08', 3,70),
 	
 	
 	
@@ -186,14 +186,14 @@ INSERT INTO orders (sales_lists_id,purchase_lists_id,is_sell,state,fill,client_i
 	(2, NULL, TRUE, 'fill', 10, 1, '2023-06-08', 2,70),
 	
 	
-	(NULL,2, TRUE, 'end', 2, 3, '2020-06-08', 2, 100),
-	(NULL,2, TRUE, 'end', 6, 2, '2021-06-08', 2, 50),
-	(NULL,2, TRUE, 'end', 8, 1, '2021-07-08', 2, 100),
-	(NULL,2, TRUE, 'end', 10, 5, '2023-06-08',2,70),
-	(NULL,2, TRUE, 'end', 2, 4, '2020-06-08', 2,100),
-	(NULL,2, TRUE, 'end', 6, 5, '2021-06-08', 2, 50),
-	(NULL,2, TRUE, 'fill', 8, 5, '2021-07-08',2,100),
-	(NULL,2, TRUE, 'fill', 10, 3, '2023-06-08', 2,70);	
+	(NULL,2, FALSE, 'end', 2, 3, '2020-06-08', 2, 100),
+	(NULL,2, FALSE, 'end', 6, 2, '2021-06-08', 2, 50),
+	(NULL,2, FALSE, 'end', 8, 1, '2021-07-08', 2, 100),
+	(NULL,2, FALSE, 'end', 10, 5, '2023-06-08',2,70),
+	(NULL,2, FALSE, 'end', 2, 4, '2020-06-08', 2,100),
+	(NULL,2, FALSE, 'end', 6, 5, '2021-06-08', 2, 50),
+	(NULL,2, FALSE, 'fill', 8, 5, '2021-07-08',2,100),
+	(NULL,2, FALSE, 'fill', 10, 3, '2023-06-08', 2,70);	
 	
 	
 	

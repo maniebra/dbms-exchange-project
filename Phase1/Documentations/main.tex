@@ -274,16 +274,16 @@ $$A \cup B$$
 
 \chapter{بهبود پایگاه داده}
 \section{نرمال‌تر سازی}
-در این بخش ما تمام جداول پایگاه داده‌ی خود را به فرم نرمال در اوردیم و تغیرات نمودار و دستورات ایجاد پایگاه داده را در دو فایل \lr{normalized sqlform Integrated.drawio} و \lr{Normalized Create Tables.sql} در مسیر \lr{Phase2/Normalize Files} قرار دادیم.
+در این بخش ما تمام جداول پایگاه داده‌ی خود را به فرم نرمال در اوردیم و تغیرات نمودار و دستورات ایجاد پایگاه داده را در دو فایل \lr{normalized\_sqlform\_Integrated.drawio} و \lr{Normalized Create Tables.sql} در مسیر \lr{Phase2/Normalize Files} قرار دادیم.
 
 \subsection{حذف \lr{crypto\_id} از \lr{transactions}}
-$$transactions(\underline{transaction\_id}, crypto\_id, source\_wallet\_id,\
-    destination\_wallet\_id, fill, wage, date,market\_id)$$
-$$F.D = \{transaction\_id \rightarrow all\space attributes , market\_id \rightarrow crypto\_id\}$$
+$$transactions(\underline{transaction\_id}, crypto\_id, source\_wallet\_id,$$
+$$destination\_wallet\_id, fill, wage, date,market\_id)$$
+$$F.D = \{transaction\_id \rightarrow all\,attributes , market\_id \rightarrow crypto\_id\}$$
 از انجایی که در $market\_id \rightarrow crypto\_id$ یک \lr{non prime attribute} به یک \lr{non prime attribute} دیگر اشاره کرده این دیپندنسی را باید در یک جدول دیگر قرار دهیم تا از دومین فرم نرمال به سومین فرم نرمال انتقال پیدا کنیم.
-$$transactions(transaction\_id, source\_wallet\_id,\newline
+$$transactions(\underline{transaction\_id}, source\_wallet\_id,\newline
     destination\_wallet\_id, fill, wage, date,market\_id)$$
-$$F.D = \{transaction\_id \rightarrow all\_attributes \}$$
+$$F.D = \{transaction\_id \rightarrow all\,attributes \}$$
 
 $$R(\underline{market\_id}, crypto\_id)$$
 $$F.D = \{market\_id \rightarrow crypto\_id\}$$

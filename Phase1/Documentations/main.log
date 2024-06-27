@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.6.25)  27 JUN 2024 17:38
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.6.25)  27 JUN 2024 18:40
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -753,13 +753,8 @@ File: trades.png Graphic file (type bmp)
 ]
 فصل 8.
 
-Overfull \hbox (127.08875pt too wide) detected at line 281
-\OML/cmm/m/it/10 transactions\OT1/cmr/m/n/10 ([]\OML/cmm/m/it/10 ; crypto[]id; source[]wallet[]id;  destination[]wallet[]id; fill; wage; date; market[]id\OT1/cmr/m/n/10 )
- []
-
-
 Overfull \hbox (80.85928pt too wide) detected at line 285
-\OML/cmm/m/it/10 transactions\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 transaction[]id; source[]wallet[]id; [] destination[]wallet[]id; fill; wage; date; market[]id\OT1/cmr/m/n/10 )
+\OML/cmm/m/it/10 transactions\OT1/cmr/m/n/10 ([]\OML/cmm/m/it/10 ; source[]wallet[]id; [] destination[]wallet[]id; fill; wage; date; market[]id\OT1/cmr/m/n/10 )
  []
 
 

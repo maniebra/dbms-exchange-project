@@ -291,7 +291,7 @@ $$F.D = \{market\_id \rightarrow crypto\_id\}$$
 حال دو جدول ما دارای سومین فرم نرمال هستند که همانطور که میبینید جدول \lr{R} زیر مجموعه ای از جدول \lr{Markets} در پایگاه داده اصلی میباشد و نیازی به ساختن جدول اضافه نیست.
 
 
-\subsection{حذف \lr{sales\_lists\_id , purchase\_list\_id} از \lr{orders}}
+\subsection{حذف \lr{sales\_lists\_id , purchase\_lists\_id} از \lr{orders}}
 $$orders(\underline{order\_id}, sales\_lists\_id,purchase\_lists\_id,is\_sell,state,fill,client\_id,$$
 $$date,market\_id,amount)$$
 $$F.D = \{order\_id \rightarrow all\,attributes, (market\_id , is\_sell) \rightarrow (sales\_lists\_id , purchase\_lists\_id)\}$$
@@ -310,8 +310,23 @@ $$F.D = \{market\_id \rightarrow purchase\_lists\_id\}$$
 
 همانطور که می دانیم دو جدول جدید ایجاد شده هر دو زیر مجموعه‌ای از جدول \lr{Orderbooks} می‌باشند و ما فقط باید دو ستون از جدول سفارشات حذف کنیم.
 
-
 \subsection{نرمال کردن جدول \lr{trades}}
+$$ trades (\underline{trade\_id},date\_placed,fill,wage,value,min\_fill\_remainder,type,market\_id,$$
+$$taker\_order\_id,maker\_order\_id,taker\_id,maker\_id,broker\_id,admin\_id)$$
+$$F.D = \{trade\_id \rightarrow all\,attribute, taker\_order\_id \rightarrow taker\_id, maker\_order\_id \rightarrow maker\_id,$$
+$$type \rightarrow (maker\_order\_id, admin\_id, min\_fill\_remainder)\}$$
+\\
+در مرحله‌ی اول ما دو دیپندسی $taker\_order\_id \rightarrow taker\_id$ و $maker\_order\_id \rightarrow maker\_id$باعث می شوند جدول ما در سومین فرم نرمال قرار نگیرد به دلیل مثال فبلی باید در جداولی دیگر قرار می دهیم که این دو جدول هر دو زیر مجموعه از جدول سفارشات هستند که ما نیازی به ساختن ان ها نداریم.
+$$ trades (\underline{trade\_id},date\_placed,fill,wage,value,min\_fill\_remainder,type,market\_id,$$
+$$taker\_order\_id,maker\_order\_id,broker\_id,admin\_id)$$
+$$F.D = \{trade\_id \rightarrow all\,attribute, type \rightarrow (maker\_order\_id, admin\_id, min\_fill\_remainder)\}$$
+\\
+رابطه‌ی $type \rightarrow (maker\_order\_id, admin\_id)$ یک دیپندنسی کامل نیست و به طور مثال ما اگر بدانیم که \lr{type == 'otc'} هست می توانیم نتیجه بگیرم که \lr{maker\_order\_id == NULL} می‌باشد و ما پس از مشورت با هد پروژه تصمیم گرفتیم که جدول را برا اساس \lr{type} به دو جدول \lr{p2p} و \lr{otc} تقسیم بکنیم.
+$$ p2p (\underline{p2p\_id},date\_placed,fill,wage,value,min\_fill\_remainder,market\_id,$$
+$$taker\_order\_id,maker\_order\_id)$$
+$$F.D = \{trade\_id \rightarrow all\,attribute\}$$
+$$ otc (\underline{otc\_id},date\_placed,fill,wage,value,taker\_id, broker\_id,admin\_id)$$
+$$F.D = \{otc\_id \rightarrow all\,attribute\}$$
 
 \section{\lr{index}ها}
 برای سه جدول خود \lr{index} قرار دادیم تا در جستار ها به ما کمک بکند.

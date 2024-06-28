@@ -242,30 +242,30 @@ $$A \cup B$$
 ما در این فاز از پروژه چهار تِغیر در نموار فاز قبلی خود ایجاد کردیم که به ترتیب عبارتند از بهینه کردن نمودار برای طراحی دیتابیس، ایجاد دیتابیس، نرمال سازی و ایندکس کردن دیتا بیس و در نهایت انجام هشت جستوجو در دیتابیس.
 \chapter{تبدیل نمودار‌های‌‌ فاز اول، به نمودار‌های منطبق با \lr{SQL}}
 \section{چهار تغیر در نمودار برای بهینه سازی}
-در این بخش نمودار خود را ةغیر دادیم تا مناسب درست کردن \lr{SQL} باشد.
+در این بخش نمودار خود را تغیر دادیم تا مناسب درست کردن \lr{SQL} باشد.
 \newpage
 
 \subsection{رابطه ی چند به چند بین کیف پول و تراکنش‌ها}
 از انجایی که در هر تراکنش دو کیف پول استفاده میشد و هر کیف پول در چندین تراکنش شرکت میکرد، یک جدول جدید اضافه کردیم که رابطه ی چند به چند را به دو رابطه ی یک به چند تقسیم کند.
-
+\\ \\
 \includegraphics[width=0.8\linewidth]{wallets_transactions.png}
 \newpage
 
 \subsection{رابطه ی چند به چند بین کاربرها و تبادل ها}
-از انجایی که هر تبادل از دو کاربر و هر کاربر در چندین تبادل شرکت میکرد، یک جدول جدول جدید اضافه کردیم که رابطه ی چند به چند را به دو رابطه ی یک به چند تسیم بکمد.
-
+از انجایی که هر تبادل از دو کاربر و هر کاربر در چندین تبادل شرکت میکرد، یک جدول جدول جدید اضافه کردیم که رابطه ی چند به چند را به دو رابطه ی یک به چند تقسیم بکند.
+\\ \\
 \includegraphics[width=0.8\linewidth]{users_trades.png}
 \newpage
 
-\subsection{رابطه ی اسپیسیفیکیشن در سفارشات}
-در فاز قبلی سفارشات به دو دسته‌ی سفارشت خرید و سفارشات فروش تقسیم می‌شدند که ما در این فاز ای رابطه را در یک جدول سفارشات از طریق ستونی به نام \lr{type} تفکیک کرده ایم.
-
+\subsection{رابطه ی \lr{specification} در سفارشات}
+در فاز قبلی سفارشات به دو دسته‌ی سفارشت خرید و سفارشات فروش تقسیم می‌شدند که ما در این فاز این دو رابطه را در یک جدول سفارشات از طریق ستونی به نام \lr{type} تفکیک کرده ایم.
+\\ \\
 \includegraphics[width=0.8\linewidth]{orders.png}
 \newpage
 
 \subsection{رابطه ‌ی جنرالیزیشن در تبادل‌ها}
 در فاز قبلی تبادل‌ها شامل دو نوع \lr{p2p} و \lr{otc} می‌شدند که ما در این فاز آن دو نوع تبادل را در یک جدول تبادل قرار دادیم که با ستون \lr{type} از هم تفکیک می شوند.
-
+\\ \\
 \includegraphics[width=0.8\linewidth]{trades.png}
 \newpage
 
@@ -289,7 +289,8 @@ $$R(\underline{market\_id}, crypto\_id)$$
 $$F.D = \{market\_id \rightarrow crypto\_id\}$$
 
 حال دو جدول ما دارای سومین فرم نرمال هستند که همانطور که میبینید جدول \lr{R} زیر مجموعه ای از جدول \lr{Markets} در پایگاه داده اصلی میباشد و نیازی به ساختن جدول اضافه نیست.
-
+\\ \\
+\large{:Anomaly} چون ارتباط $market\_id \rightarrow crypto\_id$در جدول فروشگاه هم وجود داشت، برای تِغیر دادن ویا حذف کرد یک رمزارز از یک فروشگاه مجبور بودیم که دو جدول را تغیر دهیم و ممکن بود اطلاعات اشتباه تغیر دهیم ولی در حالت جدید این رابطه فقط در یک جدول وجود دارد  .
 
 \subsection{حذف \lr{sales\_lists\_id , purchase\_lists\_id} از \lr{orders}}
 $$orders(\underline{order\_id}, sales\_lists\_id,purchase\_lists\_id,is\_sell,state,fill,client\_id,$$
@@ -309,6 +310,8 @@ $$is\_sell\,==\,FALSE:purchase\_table(\underline{market\_id}, purchase\_lists\_i
 $$F.D = \{market\_id \rightarrow purchase\_lists\_id\}$$
 
 همانطور که می دانیم دو جدول جدید ایجاد شده هر دو زیر مجموعه‌ای از جدول \lr{Orderbooks} می‌باشند و ما فقط باید دو ستون از جدول سفارشات حذف کنیم.
+\\ \\
+\large{:Anomaly} چون ارتباط $market\_id \rightarrow *\_list\_id$در جدول دفتر سفارشات هم وجود داشت، برای تِغیر دادن ویا حذف کرد یک دفتر شفارش از یک سفارش مجبور بودیم که دو جدول را تغیر دهیم و ممکن بود اطلاعات اشتباه تغیر دهیم ولی در حالت جدید این رابطه فقط در یک جدول وجود دارد  .
 
 \subsection{نرمال کردن جدول \lr{trades}}
 $$ trades (\underline{trade\_id},date\_placed,fill,wage,value,min\_fill\_remainder,type,market\_id,$$
@@ -316,7 +319,7 @@ $$taker\_order\_id,maker\_order\_id,taker\_id,maker\_id,broker\_id,admin\_id)$$
 $$F.D = \{trade\_id \rightarrow all\,attribute, taker\_order\_id \rightarrow taker\_id, maker\_order\_id \rightarrow maker\_id,$$
 $$type \rightarrow (maker\_order\_id, admin\_id, min\_fill\_remainder)\}$$
 \\
-در مرحله‌ی اول ما دو دیپندسی $taker\_order\_id \rightarrow taker\_id$ و $maker\_order\_id \rightarrow maker\_id$باعث می شوند جدول ما در سومین فرم نرمال قرار نگیرد به دلیل مثال فبلی باید در جداولی دیگر قرار می دهیم که این دو جدول هر دو زیر مجموعه از جدول سفارشات هستند که ما نیازی به ساختن ان ها نداریم.
+در مرحله‌ی اول ما دو دیپندسی $taker\_order\_id \rightarrow taker\_id$ و $maker\_order\_id \rightarrow maker\_id$باعث می شوند جدول ما در سومین فرم نرمال قرار نگیرد به دلیل مثال قبلی باید در جداولی دیگر قرار می دهیم که این دو جدول هر دو زیر مجموعه از جدول سفارشات هستند که ما نیازی به ساختن آن‌ها نداریم.
 $$ trades (\underline{trade\_id},date\_placed,fill,wage,value,min\_fill\_remainder,type,market\_id,$$
 $$taker\_order\_id,maker\_order\_id,broker\_id,admin\_id)$$
 $$F.D = \{trade\_id \rightarrow all\,attribute, type \rightarrow (maker\_order\_id, admin\_id, min\_fill\_remainder)\}$$
@@ -324,14 +327,16 @@ $$F.D = \{trade\_id \rightarrow all\,attribute, type \rightarrow (maker\_order\_
 رابطه‌ی $type \rightarrow (maker\_order\_id, admin\_id)$ یک دیپندنسی کامل نیست و به طور مثال ما اگر بدانیم که \lr{type == 'otc'} هست می توانیم نتیجه بگیرم که \lr{maker\_order\_id == NULL} می‌باشد و ما پس از مشورت با هد پروژه تصمیم گرفتیم که جدول را برا اساس \lr{type} به دو جدول \lr{p2p} و \lr{otc} تقسیم بکنیم.
 $$ p2p (\underline{p2p\_id},date\_placed,fill,wage,value,min\_fill\_remainder,market\_id,$$
 $$taker\_order\_id,maker\_order\_id)$$
-$$F.D = \{trade\_id \rightarrow all\,attribute\}$$
+$$F.D = \{p2p\_id \rightarrow all\,attribute\}$$
 $$ otc (\underline{otc\_id},date\_placed,fill,wage,value,taker\_id, broker\_id,admin\_id)$$
 $$F.D = \{otc\_id \rightarrow all\,attribute\}$$
+
+\large{:Anomaly} در مرحله‌ی اول نرمال سازی همان مشکلات دو تا نرمال سازی قبلی (تغیر دادن و حذف کردن در دو جدول) را برطرف کردیم و در مرحله‌ی دوم اگر جدول تبادلات را به دو جدول کوچکتر تبدیل نمی‌کردیم ان وقت یک جدول بزرگ با حجم زیاد داشتیم که مقدار بعضی از ستون ها در بعضی از سطر ها \lr{NULL} می شد که هم حافظه‌ی زیادی مصرف میکرد و هم کوئری زدن رو کند‌تر می‌کرد.
 
 \section{\lr{index}ها}
 برای سه جدول خود \lr{index} قرار دادیم تا در جستار ها به ما کمک بکند.
 \subsection{ایندکس تاریخ بر روی تبادل‌ها}
-از انجایی که ما نیاز داریم تا قیمت لحظه‌ای هر بازار را بر اساس اخرین تبادل ثبت شده حساب کنیم. مرتب کردن این حدول بر اساس تاریخ به محاسبه‌ی قیمت بازار بسیار کمک می‌کند.
+از انجایی که ما نیاز داریم تا قیمت لحظه‌ای هر بازار را بر اساس اخرین تبادل ثبت شده حساب کنیم. مرتب کردن این جبردول بر اساس تاریخ به محاسبه‌ی قیمت بازار بسیار کمک می‌کند.
 
 \begin{latin}
     \begin{verbatim}
@@ -351,7 +356,7 @@ $$F.D = \{otc\_id \rightarrow all\,attribute\}$$
 \end{latin}
 
 \subsection{ایندکس قیمت بر روی سفارش‌ها}
-از انجایی که تر تبادل کم قیمت‌ترین سفارش فروش مورد استفاده قرار می‌گیرد بهتر است که بر اساس قیمت سفارشات خود را مرتب کنیم تا در هر لحظه دسترسی سریعی به کم قیمت‌ترین پیشنهاد فروش داشته باشیم.
+از انجایی که درهر تبادل که ساخته می‌شود کم قیمت‌ترین سفارش فروش مورد استفاده قرار می‌گیرد بهتر است که بر اساس قیمت سفارشات خود را مرتب کنیم تا در هر لحظه دسترسی سریعی به کم قیمت‌ترین پیشنهاد فروش داشته باشیم.
 
 \begin{latin}
     \begin{verbatim}

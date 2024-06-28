@@ -301,6 +301,9 @@ INPUT ./orders.png
 INPUT ./trades.png
 INPUT ./trades.png
 INPUT ./trades.png
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmtt12.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmtt8.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmtt8.tfm
 INPUT main.aux
 INPUT ./main.out
 INPUT ./main.out

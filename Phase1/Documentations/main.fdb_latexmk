@@ -1,10 +1,10 @@
 # Fdb version 4
-["xdvipdfmx"] 1719525854.42386 "main.xdv" "main.pdf" "main" 1719525856.06378 0
-  "main.xdv" 1719525854 195016 31a6c69a3902df23abee79bc0af13e2e "xelatex"
+["xdvipdfmx"] 1719587757.62007 "main.xdv" "main.pdf" "main" 1719587759.22441 0
+  "main.xdv" 1719587757 204240 ed1822efbd058fdb02685acd127bab77 "xelatex"
   (generated)
   "main.pdf"
   (rewritten before read)
-["xelatex"] 1719525852.12962 "d:/db/ppp/Phase1/Documentations/main.tex" "main.xdv" "main" 1719525856.05786 0
+["xelatex"] 1719587755.5891 "d:/db/ppp/Phase1/Documentations/main.tex" "main.xdv" "main" 1719587759.2191 0
   "Logo BOW.png" 1719396859 153361 03f1dcb4706eb54632519467d995b530 ""
   "c:/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1719270195 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2024/texmf-dist/fonts/tfm/adobe/zapfding/pzdr.tfm" 1719277098 1528 7e12f4c0fcf5a072cebdcfbfc610f54c ""
@@ -27,6 +27,7 @@
   "c:/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmsy6.tfm" 1719268469 1116 933a60c408fc0a863a92debe84b2d294 ""
   "c:/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmsy8.tfm" 1719268469 1120 8b7d695260f3cff42e636090a8002094 ""
   "c:/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmtt10.tfm" 1719268469 768 1321e9409b4137d6fb428ac9dc956269 ""
+  "c:/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmtt12.tfm" 1719268469 772 9a936b7f5e2ff0557fce0f62822f0bbf ""
   "c:/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmtt8.tfm" 1719268469 768 d7b9a2629a0c353102ad947dc9221d49 ""
   "c:/texlive/2024/texmf-dist/tex/generic/atbegshi/atbegshi.sty" 1719266812 24708 5584a51a7101caf7e6bbf1fc27d8f7b1 ""
   "c:/texlive/2024/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty" 1719267746 40635 c40361e206be584d448876bba8a64a3b ""
@@ -124,12 +125,12 @@
   "c:/texlive/2024/texmf-dist/web2c/texmf.cnf" 1719265648 42000 d4442d41499783a67244425458021966 ""
   "c:/texlive/2024/texmf-var/web2c/xetex/xelatex.fmt" 1719277401 10868117 00058e57ce702dc3fdfc2cd1886dafc8 ""
   "c:/texlive/2024/texmf.cnf" 1719277151 713 e69b156964470283e0530f5060668171 ""
-  "d:/db/ppp/Phase1/Documentations/main.tex" 1719525851 26451 9263b98e3e1c0d7c955f4b1324983890 ""
+  "d:/db/ppp/Phase1/Documentations/main.tex" 1719587754 28052 df251283796f384153dc5027ace1925e ""
   "erds/erd.pdf" 1719396859 374305 ecbae325faf9e979bbbd5404714c41bc ""
-  "main.aux" 1719525854 8392 38aa1b8c16ba9203b068d00aa6a7c79e "xelatex"
-  "main.out" 1719525854 8745 0573197c3aa6b47352da576dce3d6abb "xelatex"
-  "main.tex" 1719525851 26451 9263b98e3e1c0d7c955f4b1324983890 ""
-  "main.toc" 1719525854 4957 23154148e6b72e404287816ade8e1130 "xelatex"
+  "main.aux" 1719587757 8387 0c162388ae6e317ef524ede5f4922d62 "xelatex"
+  "main.out" 1719587757 8714 c6798cbaae23d7a7a9d45d0913b6901d "xelatex"
+  "main.tex" 1719587754 28052 df251283796f384153dc5027ace1925e ""
+  "main.toc" 1719587757 4952 cea4d26d29bc6f959c3cba98daf65865 "xelatex"
   "orders.png" 1719419561 80757 05e2d578ce90aed4ff84d989e24931f1 ""
   "trades.png" 1719419597 70886 484f6ed6e3315ac5b2b409b87ac6558f ""
   "users_trades.png" 1719419418 16452 393cc7b01c8ccbb6917e898ea52fc87b ""

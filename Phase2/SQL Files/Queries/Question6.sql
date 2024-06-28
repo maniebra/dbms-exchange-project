@@ -1,7 +1,4 @@
-
-DROP FUNCTION get_best_sell_orders(bigint,integer);
-
-CREATE OR REPLACE FUNCTION get_best_sell_orders(target_price BIGINT, market_id_param INT)
+CREATE OR REPLACE FUNCTION get_best_volume_sell_orders(target_volume BIGINT, market_id_param INT)
 RETURNS TABLE (
     order_id INT,
     fill BIGINT,
@@ -20,7 +17,7 @@ BEGIN
             o.market_id,
             o.date,
             ROW_NUMBER() OVER (ORDER BY o.fill ASC) AS rn,
-            SUM(o.fill * o.amount) OVER (ORDER BY o.fill ASC) AS cumulative_price
+            SUM(o.amount) OVER (ORDER BY o.fill ASC) AS cumulative_volume
         FROM
             orders o
         WHERE
@@ -30,7 +27,7 @@ BEGIN
     OrdersWithPrev AS (
         SELECT
             ro.*,
-            LAG(ro.cumulative_price) OVER (ORDER BY ro.rn) AS prev_cumulative_price
+            LAG(ro.cumulative_volume) OVER (ORDER BY ro.rn) AS prev_cumulative_volume
         FROM
             RankedOrders ro
     ),
@@ -42,13 +39,13 @@ BEGIN
             ow.market_id,
             ow.date,
             ow.rn,
-            ow.cumulative_price,
-            ow.prev_cumulative_price
+            ow.cumulative_volume,
+            ow.prev_cumulative_volume
         FROM
             OrdersWithPrev ow
         WHERE
-            ow.cumulative_price <= target_price
-            OR (ow.cumulative_price > target_price AND ow.prev_cumulative_price <= target_price)
+            ow.cumulative_volume <= target_volume
+            OR (ow.cumulative_volume > target_volume AND ow.prev_cumulative_volume <= target_volume)
     )
     SELECT
         so.order_id,
@@ -59,11 +56,9 @@ BEGIN
         so.date
     FROM
         SelectedOrders so
-    ORDER BY so.cumulative_price;
+    ORDER BY so.amount;
 END;
 $$ LANGUAGE plpgsql;
 
 
-
-SELECT * FROM get_best_sell_orders(2000,1);
-
+SELECT * FROM get_best_volume_sell_orders(1000,1);

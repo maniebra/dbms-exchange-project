@@ -2,18 +2,20 @@ mongoose = require('mongoose')
 
 const orderbookSchema = new mongoose.Schema({
     userId: Number,
-    ordertype: String,
+    orderType: String,
     marketId: String,
     currency: String,
     amount: Number,
     price: Number,
     type: String,
     status: String,
+    createdAt: {
+        type: Date,
+        default: Date.now,
+    },
 })
 
 const orderbook = mongoose.model('orderbook', orderbookSchema)
-
-module.exports = orderbook
 
 const logsSchema = new mongoose.Schema({
     text: String,
@@ -21,4 +23,4 @@ const logsSchema = new mongoose.Schema({
 
 const logs = mongoose.model('logs', logsSchema)
 
-module.exports = logs
+module.exports = { logs, orderbook }

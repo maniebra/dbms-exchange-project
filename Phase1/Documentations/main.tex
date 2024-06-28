@@ -335,12 +335,13 @@ $$F.D = \{otc\_id \rightarrow all\,attribute\}$$
 
 \section{\lr{index}ها}
 برای سه جدول خود \lr{index} قرار دادیم تا در جستار ها به ما کمک بکند.
-\subsection{ایندکس تاریخ بر روی تبادل‌ها}
-از انجایی که ما نیاز داریم تا قیمت لحظه‌ای هر بازار را بر اساس اخرین تبادل ثبت شده حساب کنیم. مرتب کردن این جبردول بر اساس تاریخ به محاسبه‌ی قیمت بازار بسیار کمک می‌کند.
+\subsection{ایندکس تاریخ بر روی \lr{p2p}}
+از انجایی که ما نیاز داریم تا قیمت لحظه‌ای هر بازار را بر اساس اخرین تبادل ثبت شده حساب کنیم. مرتب کردن این جدول بر اساس تاریخ به محاسبه‌ی قیمت بازار بسیار کمک می‌کند.
 
 \begin{latin}
     \begin{verbatim}
-    CREATE INDEX IF NOT EXISTS date_placed_idx ON trades(date_placed);
+    CREATE INDEX IF NOT EXISTS date_placed_idx 
+        ON p2p(date_placed);
     \end{verbatim}
 \end{latin}
 

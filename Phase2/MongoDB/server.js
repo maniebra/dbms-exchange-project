@@ -1,4 +1,10 @@
 const express = require('express')
+const mongoose = require('mongoose')
+
+mongoose
+    .connect('mongodb://0.0.0.0:27017/exchange')
+    .then(() => console.log('DB connected'))
+
 const router = require('./router')
 
 const app = express()

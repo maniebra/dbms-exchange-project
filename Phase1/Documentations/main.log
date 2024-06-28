@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.6.25)  28 JUN 2024 19:02
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.6.25)  29 JUN 2024 00:13
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -615,7 +615,7 @@ LaTeX Font Warning: Font shape `TU/x-nima.ttf(0)/b/n' undefined
 [4]
 فصل 1.
 
-Overfull \hbox (19.28pt too wide) in paragraph at lines 81--81
+Overfull \hbox (19.28pt too wide) in paragraph at lines 82--82
 [][]\TU/lmroman10-regular(0)/m/n/7 https://docs.google.com/spreadsheets/d/1x1Guh4HTWLyG9GTomZEtesp5cjIGez9m9Day3bS_kgM/edit?usp=sharing[] []
  []
 
@@ -642,29 +642,29 @@ Overfull \hbox (19.28pt too wide) in paragraph at lines 81--81
 ]
 فصل 3.
 
-Underfull \hbox (badness 10000) in paragraph at lines 187--188
+Underfull \hbox (badness 10000) in paragraph at lines 188--189
 [][]
  []
 
 
 
 [11]
-Underfull \hbox (badness 10000) in paragraph at lines 189--192
+Underfull \hbox (badness 10000) in paragraph at lines 190--193
 [][]
  []
 
 
-Overfull \hbox (4.44716pt too wide) in paragraph at lines 200--203
+Overfull \hbox (4.44716pt too wide) in paragraph at lines 201--204
 []$\OML/cmm/m/it/10 ^^[[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 Transactions \U/msb/m/n/10 o \OML/cmm/m/it/10 Cryptocurrency\OT1/cmr/m/n/10 ))$ []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 219--225
+Underfull \hbox (badness 10000) in paragraph at lines 220--226
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 230--232
+Underfull \hbox (badness 10000) in paragraph at lines 231--233
 [][]
  []
 
@@ -679,7 +679,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 230--232
 ]
 فصل 4.
 
-Overfull \hbox (0.42686pt too wide) in paragraph at lines 237--238
+Overfull \hbox (0.42686pt too wide) in paragraph at lines 238--239
 [][]\TU/x-nima.ttf(0)/m/sl/10 در صورتی که در مشاهده‌ی این تصویر مشکل دارید، فایل []\TU/lmroman10-regular(0)/m/n/10 PDF[] \TU/x-nima.ttf(0)/m/sl/10 را با مرورگرهای []\TU/lmroman10-regular(0)/m/n/10 Edge[] \TU/x-nima.ttf(0)/m/sl/10 یا []\TU/lmroman10-regular(0)/m/n/10 Chrome[][]
  []
 
@@ -722,7 +722,7 @@ File: ./erds/erd.pdf Graphic file (type pdf)
 File: wallets_transactions.png Graphic file (type bmp)
 <wallets_transactions.png>
 
-Underfull \hbox (badness 10000) in paragraph at lines 249--252
+Underfull \hbox (badness 10000) in paragraph at lines 250--253
 [][]
  []
 
@@ -732,7 +732,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 249--252
 File: users_trades.png Graphic file (type bmp)
 <users_trades.png>
 
-Underfull \hbox (badness 10000) in paragraph at lines 255--258
+Underfull \hbox (badness 10000) in paragraph at lines 256--259
 [][]
  []
 
@@ -742,7 +742,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 255--258
 File: orders.png Graphic file (type bmp)
 <orders.png>
 
-Underfull \hbox (badness 10000) in paragraph at lines 261--264
+Underfull \hbox (badness 10000) in paragraph at lines 262--265
 [][]
  []
 
@@ -752,7 +752,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 261--264
 File: trades.png Graphic file (type bmp)
 <trades.png>
 
-Underfull \hbox (badness 10000) in paragraph at lines 267--270
+Underfull \hbox (badness 10000) in paragraph at lines 268--271
 [][]
  []
 
@@ -773,104 +773,104 @@ Underfull \hbox (badness 10000) in paragraph at lines 267--270
 ]
 فصل 8.
 
-Overfull \hbox (80.85928pt too wide) detected at line 285
+Overfull \hbox (80.85928pt too wide) detected at line 286
 \OML/cmm/m/it/10 transactions\OT1/cmr/m/n/10 ([]\OML/cmm/m/it/10 ; source[]wallet[]id; [] destination[]wallet[]id; fill; wage; date; market[]id\OT1/cmr/m/n/10 )
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 291--294
+Underfull \hbox (badness 10000) in paragraph at lines 292--295
 [][]
  []
 
 
-Overfull \hbox (5.43736pt too wide) in paragraph at lines 291--294
+Overfull \hbox (5.43736pt too wide) in paragraph at lines 292--295
 []\TU/x-nima.ttf(0)/b/n/12 :Anomaly چون ارتباط $\OML/cmm/m/it/12 market[]id \OMS/cmsy/m/n/12 ! \OML/cmm/m/it/12 crypto[]id$\TU/x-nima.ttf(0)/b/n/12 در جدول فروشگاه هم وجود داشت،[]
  []
 
 
-Overfull \hbox (52.70699pt too wide) detected at line 296
+Overfull \hbox (52.70699pt too wide) detected at line 297
 \OML/cmm/m/it/12 orders\OT1/cmr/m/n/12 ([]\OML/cmm/m/it/12 ; sales[]lists[]id; purchase[]lists[]id; is[]sell; state; fill; client[]id;
  []
 
 
 
 [27]
-Overfull \hbox (131.18033pt too wide) detected at line 298
+Overfull \hbox (131.18033pt too wide) detected at line 299
 \OML/cmm/m/it/12 F:D \OT1/cmr/m/n/12 = \OMS/cmsy/m/n/12 f\OML/cmm/m/it/12 order[]id \OMS/cmsy/m/n/12 ! \OML/cmm/m/it/12 all attributes; \OT1/cmr/m/n/12 (\OML/cmm/m/it/12 market[]id; is[]sell\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ! \OT1/cmr/m/n/12 (\OML/cmm/m/it/12 sales[]lists[]id; purchase[]lists[]id\OT1/cmr/m/n/12 )\OMS/cmsy/m/n/12 g
  []
 
 
-Overfull \hbox (6.08435pt too wide) in paragraph at lines 298--302
+Overfull \hbox (6.08435pt too wide) in paragraph at lines 299--303
 []\TU/x-nima.ttf(0)/b/n/12 از انجایی که در$\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 market[]id; is[]sell\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ! \OT1/cmr/m/n/12 (\OML/cmm/m/it/12 sales[]lists[]id; purchase[]lists[]id\OT1/cmr/m/n/12 )$[]
  []
 
 
-Overfull \hbox (24.00815pt too wide) in paragraph at lines 298--302
+Overfull \hbox (24.00815pt too wide) in paragraph at lines 299--303
 []\TU/x-nima.ttf(0)/b/n/12 به دو رابطه‌ی $\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 market[]id; is[]sell\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ! \OML/cmm/m/it/12 sales[]lists[]id$ \TU/x-nima.ttf(0)/b/n/12 و $\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 market[]id; is[]sell\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 !$[]
  []
 
 
-Overfull \hbox (15.157pt too wide) detected at line 303
+Overfull \hbox (15.157pt too wide) detected at line 304
 \OML/cmm/m/it/12 orders\OT1/cmr/m/n/12 ([]\OML/cmm/m/it/12 ; is[]sell; state; fill; client[]id; date; market[]id; amount\OT1/cmr/m/n/12 )
  []
 
 
-Overfull \hbox (4.3851pt too wide) detected at line 309
+Overfull \hbox (4.3851pt too wide) detected at line 310
 \OML/cmm/m/it/12 is[]sell  \OT1/cmr/m/n/12 ==  \OML/cmm/m/it/12 FALSE \OT1/cmr/m/n/12 : \OML/cmm/m/it/12 purchase[]table\OT1/cmr/m/n/12 ([]\OML/cmm/m/it/12 ; purchase[]lists[]id\OT1/cmr/m/n/12 )
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 312--315
+Underfull \hbox (badness 10000) in paragraph at lines 313--316
 [][]
  []
 
 
-Overfull \hbox (87.30739pt too wide) detected at line 317
+Overfull \hbox (87.30739pt too wide) detected at line 318
 \OML/cmm/m/it/12 trades\OT1/cmr/m/n/12 ([]\OML/cmm/m/it/12 ; date[]placed; fill; wage; value; min[]fill[]remainder; type; market[]id;
  []
 
 
-Overfull \hbox (33.5404pt too wide) detected at line 318
+Overfull \hbox (33.5404pt too wide) detected at line 319
 \OML/cmm/m/it/12 taker[]order[]id; maker[]order[]id; taker[]id; maker[]id; broker[]id; admin[]id\OT1/cmr/m/n/12 )
  []
 
 
-Overfull \hbox (122.10019pt too wide) detected at line 319
+Overfull \hbox (122.10019pt too wide) detected at line 320
 \OML/cmm/m/it/12 F:D \OT1/cmr/m/n/12 = \OMS/cmsy/m/n/12 f\OML/cmm/m/it/12 trade[]id \OMS/cmsy/m/n/12 ! \OML/cmm/m/it/12 all attribute; taker[]order[]id \OMS/cmsy/m/n/12 ! \OML/cmm/m/it/12 taker[]id; maker[]order[]id \OMS/cmsy/m/n/12 ! \OML/cmm/m/it/12 maker[]id;
  []
 
 
 
 [28]
-Overfull \hbox (22.05841pt too wide) in paragraph at lines 320--323
+Overfull \hbox (22.05841pt too wide) in paragraph at lines 321--324
 []\TU/x-nima.ttf(0)/b/n/12 در مرحله‌ی اول ما دو دیپندسی $\OML/cmm/m/it/12 taker[]order[]id \OMS/cmsy/m/n/12 ! \OML/cmm/m/it/12 taker[]id$ \TU/x-nima.ttf(0)/b/n/12 و $\OML/cmm/m/it/12 maker[]order[]id \OMS/cmsy/m/n/12 !$[]
  []
 
 
-Overfull \hbox (87.30739pt too wide) detected at line 323
+Overfull \hbox (87.30739pt too wide) detected at line 324
 \OML/cmm/m/it/12 trades\OT1/cmr/m/n/12 ([]\OML/cmm/m/it/12 ; date[]placed; fill; wage; value; min[]fill[]remainder; type; market[]id;
  []
 
 
-Overfull \hbox (127.99849pt too wide) detected at line 325
+Overfull \hbox (127.99849pt too wide) detected at line 326
 \OML/cmm/m/it/12 F:D \OT1/cmr/m/n/12 = \OMS/cmsy/m/n/12 f\OML/cmm/m/it/12 trade[]id \OMS/cmsy/m/n/12 ! \OML/cmm/m/it/12 all attribute; type \OMS/cmsy/m/n/12 ! \OT1/cmr/m/n/12 (\OML/cmm/m/it/12 maker[]order[]id; admin[]id; min[]fill[]remainder\OT1/cmr/m/n/12 )\OMS/cmsy/m/n/12 g
  []
 
 
-Overfull \hbox (34.93431pt too wide) detected at line 328
+Overfull \hbox (34.93431pt too wide) detected at line 329
 \OML/cmm/m/it/12 p\OT1/cmr/m/n/12 2\OML/cmm/m/it/12 p\OT1/cmr/m/n/12 ([]\OML/cmm/m/it/12 ; date[]placed; fill; wage; value; min[]fill[]remainder; market[]id;
  []
 
 
-Overfull \hbox (18.4683pt too wide) detected at line 331
+Overfull \hbox (18.4683pt too wide) detected at line 332
 \OML/cmm/m/it/12 otc\OT1/cmr/m/n/12 ([]\OML/cmm/m/it/12 ; date[]placed; fill; wage; value; taker[]id; broker[]id; admin[]id\OT1/cmr/m/n/12 )
  []
 
 
 
 [29]
-Overfull \hbox (25.79993pt too wide) in paragraph at lines 365--365
-[][]    \TU/lmtt/m/n/12 CREATE INDEX IF NOT EXISTS amount_idx ON orders(amount);[] []
+Overfull \hbox (1.07993pt too wide) in paragraph at lines 366--366
+[][]    \TU/lmtt/m/n/12 CREATE INDEX IF NOT EXISTS fill_idx ON orders(fill);[] []
  []
 
 
@@ -896,4 +896,4 @@ Here is how much of TeX's memory you used:
  1348 hyphenation exceptions out of 8191
  86i,17n,99p,1047b,532s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.xdv (30 pages, 204076 bytes).
+Output written on main.xdv (30 pages, 204036 bytes).

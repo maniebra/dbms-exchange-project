@@ -1,5 +1,16 @@
 const express = require('express')
 mongoose = require('mongoose')
+const { Pool, Client } = require('pg')
+
+const pool = new Pool({
+    user: 'postgres',
+    host: 'localhost',
+    database: 'exchange',
+    password: '#ihP4ever',
+    port: '5432',
+})
+
+pool.connect().then(() => console.log('Postgre Connected'))
 
 const { logs, orderbook } = require('./model')
 
@@ -14,35 +25,25 @@ const catchAsync = (fn) => {
 router.get(
     '/otc/prices',
     catchAsync(async (req, res, next) => {
-        const sellOrders = await orderbook.aggregate([
+        const prices = await orderbook.aggregate([
             {
-                $match: { orderType: 'otc', type: 'sell' },
+                $match: { orderType: 'otc' },
             },
             {
                 $group: {
-                    _id: { $toUpper: '$currency' },
-                    sellPrice: { $avg: '$price' },
+                    _id: { currency: '$currency', type: '$type' },
+                    Prices: { $push: '$price' },
                 },
             },
-        ])
-
-        const buyOrders = await orderbook.aggregate([
             {
-                $match: { orderType: 'otc', type: 'buy' },
-            },
-            {
-                $group: {
-                    _id: { $toUpper: '$currency' },
-                    buyPrice: { $avg: '$price' },
-                },
+                $sort: { '_id.currency': 1, '_id.type': 1 },
             },
         ])
 
         res.status(200).json({
             status: 'success',
             data: {
-                sellOrders,
-                buyOrders,
+                prices,
             },
         })
     })
@@ -53,12 +54,18 @@ router.get(
     catchAsync(async (req, res, next) => {
         const markets = await orderbook.aggregate([
             {
-                $match: { orderType: 'p2p' },
+                $match: {
+                    orderType: 'p2p',
+                    //                , status: 'fill'// orders get traded and completed
+                },
+            },
+            {
+                $sort: { createdAt: 1 },
             },
             {
                 $group: {
                     _id: { $toUpper: '$marketId' },
-                    basePrice: { $avg: '$price' },
+                    basePrice: { $last: '$price' },
                 },
             },
         ])
@@ -77,7 +84,6 @@ router
             const orders = await orderbook.find({
                 ...req.query,
                 orderType: 'otc',
-                status: 'Refusal to fill',
             })
             res.status(200).json({
                 status: 'success',
@@ -92,6 +98,9 @@ router
                 orderType: 'otc',
                 status: 'Refusal to fill',
             })
+            await logs.create({
+                text: `Otc order with id: ${order._id} created.`,
+            })
             res.status(200).json({
                 message: 'success',
                 data: {
@@ -103,14 +112,17 @@ router
     )
     .delete(
         catchAsync(async (req, res, next) => {
-            await orderbook.findByIdAndUpdate(req.query.orderId, {
+            const order = await orderbook.findByIdAndUpdate(req.query.orderId, {
                 status: 'cancelled',
+            })
+            await logs.create({
+                text: `Otc order with id: ${order._id} cancelled.`,
             })
             res.status(200).json({
                 status: 'success',
                 data: {
-                    orderId: req.query.orderId,
-                    status: 'cancelled',
+                    orderId: order._id,
+                    status: order.status,
                 },
             })
         })
@@ -138,10 +150,15 @@ router
             const order = await orderbook.create({
                 ...req.body,
                 orderType: 'p2p',
+                status: 'Refusal to fill',
+            })
+            await logs.create({
+                text: `P2p order with id: ${order._id} created.`,
             })
             res.status(200).json({
                 message: 'success',
                 data: {
+                    marketVolume: order.market_id,
                     orderId: order._id,
                     status: order.status,
                 },
@@ -152,6 +169,10 @@ router
         catchAsync(async (req, res, next) => {
             await orderbook.findByIdAndUpdate(req.query.orderId, {
                 status: 'cancelled',
+            })
+
+            await logs.create({
+                text: `P2p order with id: ${order._id} cancelled.`,
             })
             res.status(200).json({
                 status: 'success',
@@ -166,9 +187,13 @@ router
 router.get(
     '/wallets',
     catchAsync(async (req, res, next) => {
+        const wallets = await pool.query(
+            'SELECT wallet_id, owner_id, name, free_value FROM wallets JOIN cryptocurrencies ON wallets.crypto_id = cryptocurrencies.crypto_id WHERE owner_id = $1',
+            [req.query.userId]
+        )
         res.status(200).json({
             status: 'success',
-            data: {},
+            data: { array: wallets.rows },
         })
     })
 )
@@ -176,9 +201,13 @@ router.get(
 router.get(
     '/transactions/history',
     catchAsync(async (req, res, next) => {
+        const transactions = await pool.query(
+            'WITH WALLETS_CRYPTO AS (SELECT OWNER_ID,WALLET_ID,NAME FROM WALLETS JOIN CRYPTOCURRENCIES ON WALLETS.CRYPTO_ID = CRYPTOCURRENCIES.CRYPTO_ID ) SELECT TRANSACTION_ID, FILL, DATE, SRC_WALLET.NAME , SRC_WALLET.OWNER_ID AS FROM_USER_ID, DST_WALLET.OWNER_ID AS TO_USER_ID  FROM TRANSACTIONS JOIN WALLETS_CRYPTO AS SRC_WALLET ON TRANSACTIONS.SOURCE_WALLET_ID = SRC_WALLET.WALLET_ID JOIN WALLETS_CRYPTO AS DST_WALLET ON TRANSACTIONS.DESTINATION_WALLET_ID = DST_WALLET.WALLET_ID WHERE SRC_WALLET.OWNER_ID = $1 OR DST_WALLET.OWNER_ID = $1 LIMIT $2 OFFSET $3',
+            [req.query.userId, req.query.limit, req.query.offset]
+        )
         res.status(200).json({
             status: 'success',
-            data: {},
+            data: { array: transactions.rows },
         })
     })
 )

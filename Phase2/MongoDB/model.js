@@ -6,7 +6,7 @@ const orderbookSchema = new mongoose.Schema({
     marketId: String,
     currency: String,
     amount: Number,
-    price: Number,
+    price: { type: Number, index: true },
     type: String,
     status: String,
     createdAt: {

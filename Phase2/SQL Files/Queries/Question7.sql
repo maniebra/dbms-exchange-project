@@ -1,4 +1,4 @@
-DROP FUNCTION IF EXISTS get_best_p2p_sell_orders(bigint,integer);
+DROP FUNCTION IF EXISTS get_best_p2p_sell_orders(bigint, integer);
 
 CREATE OR REPLACE FUNCTION get_best_p2p_sell_orders(target_volume BIGINT, market_id_param INT)
 RETURNS TABLE (
@@ -10,9 +10,6 @@ RETURNS TABLE (
     date TIMESTAMP,
     average_price NUMERIC
 ) AS $$
-DECLARE
-    total_selected_volume BIGINT;
-    total_selected_price BIGINT;
 BEGIN
     RETURN QUERY
     WITH RankedOrders AS (
@@ -22,7 +19,6 @@ BEGIN
             o.amount,
             o.market_id,
             o.date,
-            ROW_NUMBER() OVER (ORDER BY o.fill ASC) AS rn,
             SUM(o.amount) OVER (ORDER BY o.fill ASC) AS cumulative_volume
         FROM
             orders o
@@ -30,27 +26,15 @@ BEGIN
             o.is_sell = TRUE
             AND o.market_id = market_id_param
     ),
-    OrdersWithPrev AS (
-        SELECT
-            ro.*,
-            LAG(ro.cumulative_volume) OVER (ORDER BY ro.rn) AS prev_cumulative_volume
-        FROM
-            RankedOrders ro
-    ),
     SelectedOrders AS (
         SELECT
-            ow.order_id,
-            ow.fill,
-            ow.amount,
-            ow.market_id,
-            ow.date,
-            ow.cumulative_volume,
-            ow.prev_cumulative_volume
+            ro.*,
+            LAG(ro.cumulative_volume, 1, 0) OVER (ORDER BY ro.fill ASC) AS prev_cumulative_volume
         FROM
-            OrdersWithPrev ow
+            RankedOrders ro
         WHERE
-            ow.cumulative_volume <= target_volume
-            OR (ow.cumulative_volume > target_volume AND ow.prev_cumulative_volume <= target_volume)
+            ro.cumulative_volume <= target_volume
+            OR (ro.prev_cumulative_volume < target_volume AND ro.cumulative_volume >= target_volume)
     ),
     AggregatedResults AS (
         SELECT
@@ -72,27 +56,10 @@ BEGIN
         ar.price,
         ar.market_id,
         ar.date,
-        (CASE WHEN ar.total_selected_volume >= target_volume THEN ar.total_selected_price::NUMERIC / target_volume ELSE NULL END) AS average_price
+        CASE WHEN ar.total_selected_volume >= target_volume THEN ar.total_selected_price::NUMERIC / ar.total_selected_volume ELSE NULL END AS average_price
     FROM
-        AggregatedResults ar
-    WHERE
-        ar.total_selected_volume <= target_volume
-    UNION ALL
-    SELECT
-        ar.order_id,
-        ar.fill,
-        ar.amount,
-        ar.price,
-        ar.market_id,
-        ar.date,
-        (CASE WHEN ar.total_selected_volume >= target_volume THEN ar.total_selected_price::NUMERIC / target_volume ELSE NULL END) AS average_price
-    FROM
-        AggregatedResults ar
-    WHERE
-        ar.total_selected_volume > target_volume
-    LIMIT 1;
+        AggregatedResults ar;
 END;
 $$ LANGUAGE plpgsql;
 
-
-SELECT * FROM get_best_p2p_sell_orders(1000,1);
+SELECT * FROM get_best_p2p_sell_orders(100, 1);

@@ -1,3 +1,5 @@
+DROP FUNCTION get_best_volume_sell_orders(bigint,integer);
+
 CREATE OR REPLACE FUNCTION get_best_volume_sell_orders(target_volume BIGINT, market_id_param INT)
 RETURNS TABLE (
     order_id INT,
@@ -16,49 +18,67 @@ BEGIN
             o.amount,
             o.market_id,
             o.date,
-            ROW_NUMBER() OVER (ORDER BY o.fill ASC) AS rn,
-            SUM(o.amount) OVER (ORDER BY o.fill ASC) AS cumulative_volume
+            (o.fill * o.amount) AS price,
+            ROW_NUMBER() OVER (ORDER BY o.amount ASC) AS rn,
+            SUM(o.amount) OVER (ORDER BY o.amount ASC) AS cumulative_amount
         FROM
             orders o
         WHERE
             o.is_sell = TRUE
             AND o.market_id = market_id_param
+		ORDER BY o.fill ASC
     ),
-    OrdersWithPrev AS (
+    FinalOrders AS (
         SELECT
-            ro.*,
-            LAG(ro.cumulative_volume) OVER (ORDER BY ro.rn) AS prev_cumulative_volume
+            ro.order_id,
+            ro.fill,
+            ro.amount,
+            ro.price,
+            ro.market_id,
+            ro.date,
+            ro.cumulative_amount,
+            CASE 
+                WHEN ro.cumulative_amount >= target_volume THEN 'sufficient'
+                ELSE 'insufficient'
+            END AS status
         FROM
             RankedOrders ro
     ),
-    SelectedOrders AS (
+    SufficientOrders AS (
         SELECT
-            ow.order_id,
-            ow.fill,
-            ow.amount,
-            ow.market_id,
-            ow.date,
-            ow.rn,
-            ow.cumulative_volume,
-            ow.prev_cumulative_volume
+            fo.*
         FROM
-            OrdersWithPrev ow
+            FinalOrders fo
         WHERE
-            ow.cumulative_volume <= target_volume
-            OR (ow.cumulative_volume > target_volume AND ow.prev_cumulative_volume <= target_volume)
+            fo.status = 'sufficient'
+        ORDER BY
+            fo.fill, fo.cumulative_amount
+        LIMIT 1
     )
+    SELECT
+        fo.order_id,
+        fo.fill,
+        fo.amount,
+        fo.price,
+        fo.market_id,
+        fo.date
+    FROM
+        FinalOrders fo
+    WHERE
+        fo.status = 'insufficient'
+    UNION ALL
     SELECT
         so.order_id,
         so.fill,
         so.amount,
-        (so.fill * so.amount) AS price,
+        so.price,
         so.market_id,
         so.date
     FROM
-        SelectedOrders so
-    ORDER BY so.amount;
+        SufficientOrders so;
 END;
 $$ LANGUAGE plpgsql;
 
 
-SELECT * FROM get_best_volume_sell_orders(1000,1);
+
+SELECT * FROM get_best_volume_sell_orders(100,1);

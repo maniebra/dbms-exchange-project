@@ -1,65 +1,72 @@
-DROP FUNCTION IF EXISTS get_best_p2p_sell_orders(bigint, integer);
+DROP FUNCTION IF EXISTS compare_p2p_and_otc(bigint, integer, numeric);
 
-CREATE OR REPLACE FUNCTION get_best_p2p_sell_orders(target_volume BIGINT, market_id_param INT)
+CREATE OR REPLACE FUNCTION compare_p2p_and_otc(target_volume BIGINT, market_id_param INT, otc_price NUMERIC)
 RETURNS TABLE (
-    order_id INT,
-    fill BIGINT,
-    amount BIGINT,
-    price BIGINT,
-    market_id INT,
-    date TIMESTAMP,
+    source TEXT,
     average_price NUMERIC
 ) AS $$
+DECLARE
+    total_price NUMERIC;
+    final_adjustment BIGINT;
 BEGIN
-    RETURN QUERY
-    WITH RankedOrders AS (
-        SELECT
-            o.order_id,
-            o.fill,
-            o.amount,
-            o.market_id,
-            o.date,
-            SUM(o.amount) OVER (ORDER BY o.fill ASC) AS cumulative_volume
-        FROM
-            orders o
-        WHERE
-            o.is_sell = TRUE
-            AND o.market_id = market_id_param
+    -- Retrieve and adjust the order data
+    WITH OrderData AS (
+        SELECT 
+            gt.amount, 
+            gt.fill,
+            SUM(gt.amount) OVER (ORDER BY gt.fill ASC) AS cumulative_volume,
+            ROW_NUMBER() OVER (ORDER BY gt.fill ASC) AS rn
+        FROM get_best_volume_sell_orders(target_volume, market_id_param) gt
     ),
-    SelectedOrders AS (
-        SELECT
-            ro.*,
-            LAG(ro.cumulative_volume, 1, 0) OVER (ORDER BY ro.fill ASC) AS prev_cumulative_volume
-        FROM
-            RankedOrders ro
-        WHERE
-            ro.cumulative_volume <= target_volume
-            OR (ro.prev_cumulative_volume < target_volume AND ro.cumulative_volume >= target_volume)
+    AdjustedData AS (
+        SELECT 
+            od.amount,
+            od.fill,
+            CASE 
+                WHEN od.cumulative_volume > target_volume THEN od.amount - (od.cumulative_volume - target_volume)
+                ELSE od.amount
+            END AS adjusted_amount,
+            od.rn
+        FROM OrderData od
     ),
-    AggregatedResults AS (
-        SELECT
-            so.order_id,
-            so.fill,
-            so.amount,
-            (so.fill * so.amount) AS price,
-            so.market_id,
-            so.date,
-            SUM(so.amount) OVER () AS total_selected_volume,
-            SUM(so.fill * so.amount) OVER () AS total_selected_price
-        FROM
-            SelectedOrders so
+    FinalData AS (
+        SELECT 
+            ad.amount,
+            ad.fill,
+            ad.adjusted_amount,
+            (ad.fill * ad.adjusted_amount) AS weighted_price
+        FROM AdjustedData ad
+    ),
+    Adjustment AS (
+        SELECT 
+            amount,
+            fill,
+            adjusted_amount,
+            weighted_price
+        FROM FinalData
+        UNION ALL
+        SELECT 
+            0 AS amount,
+            MAX(fill) AS fill,
+            -(SUM(adjusted_amount) - target_volume) AS adjusted_amount,
+            (MAX(fill) * -(SUM(adjusted_amount) - target_volume)) AS weighted_price
+        FROM FinalData
     )
-    SELECT
-        ar.order_id,
-        ar.fill,
-        ar.amount,
-        ar.price,
-        ar.market_id,
-        ar.date,
-        CASE WHEN ar.total_selected_volume >= target_volume THEN ar.total_selected_price::NUMERIC / ar.total_selected_volume ELSE NULL END AS average_price
-    FROM
-        AggregatedResults ar;
+    SELECT 
+        SUM(a.weighted_price)::NUMERIC / target_volume AS average_price
+    INTO total_price
+    FROM Adjustment a;
+
+    -- Compare the weighted average price with OTC price
+    IF total_price IS NULL OR total_price > otc_price THEN
+        RETURN QUERY SELECT 'OTC' AS source, otc_price AS average_price;
+    ELSE
+        RETURN QUERY SELECT 'P2P' AS source, total_price AS average_price;
+    END IF;
 END;
 $$ LANGUAGE plpgsql;
 
-SELECT * FROM get_best_p2p_sell_orders(100, 1);
+
+
+-- Call the function with your desired parameters
+SELECT * FROM compare_p2p_and_otc(320, 1, 1.5);

@@ -215,9 +215,24 @@ router.get(
 router.post(
     '/transactions',
     catchAsync(async (req, res, next) => {
+        const src_wallet_id = await pool.query(
+            'SELECT wallet_id, CRYPTOCURRENCIES.crypto_id FROm wallets JOIN CRYPTOCURRENCIES ON WALLETS.CRYPTO_ID = CRYPTOCURRENCIES.CRYPTO_ID WHERE name = $1 AND owner_id = $2',
+            [req.body.currency, req.body.fromUserId]
+        )
+        const dst_wallet_id = await pool.query(
+            'SELECT wallet_id, CRYPTOCURRENCIES.crypto_id FROm wallets JOIN CRYPTOCURRENCIES ON WALLETS.CRYPTO_ID = CRYPTOCURRENCIES.CRYPTO_ID WHERE name = $1 AND owner_id = $2',
+            [req.body.currency, req.body.toUserId]
+        )
+        const transaction = await pool.query(
+            'INSERT INTO transactions (source_wallet_id, destination_wallet_id, fill, wage, date,market_id) VALUES ($, $2, 100, 5, $3 , 1) RETURNING TRANACTION_ID, FILL',
+            []
+        )
         res.status(200).json({
             status: 'success',
-            data: {},
+            data: {
+                id: transaction.rows.transaction_id,
+                status: transaction.rows.fill,
+            },
         })
     })
 )

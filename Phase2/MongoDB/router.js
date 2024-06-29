@@ -224,14 +224,25 @@ router.post(
             [req.body.currency, req.body.toUserId]
         )
         const transaction = await pool.query(
-            'INSERT INTO transactions (source_wallet_id, destination_wallet_id, fill, wage, date,market_id) VALUES ($, $2, 100, 5, $3 , 1) RETURNING TRANACTION_ID, FILL',
-            []
+            'INSERT INTO transactions (source_wallet_id, destination_wallet_id, fill, wage,market_id) VALUES ($1, $2, $3, 5, $4) RETURNING TRANSACTION_ID, FILL',
+            [
+                src_wallet_id.rows[0].wallet_id,
+                dst_wallet_id.rows[0].wallet_id,
+                req.body.amount,
+                src_wallet_id.rows[0].crypto_id,
+            ]
         )
+        const text = `${transaction.rows[0].fill} ${req.body.currency} transfered from userId: ${req.body.fromUserId} to userId: ${req.body.toUserId}`
+
+        await logs.create({
+            text,
+        })
+
         res.status(200).json({
             status: 'success',
             data: {
-                id: transaction.rows.transaction_id,
-                status: transaction.rows.fill,
+                transaction_id: transaction.rows[0].transaction_id,
+                text,
             },
         })
     })

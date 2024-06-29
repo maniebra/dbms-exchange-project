@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.6.29)  29 JUN 2024 23:22
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.6.29)  29 JUN 2024 23:44
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -683,7 +683,7 @@ File: ./erds/erd.pdf Graphic file (type pdf)
 File: wallets_transactions.png Graphic file (type bmp)
 <wallets_transactions.png>
 
-Underfull \hbox (badness 10000) in paragraph at lines 251--254
+Underfull \hbox (badness 10000) in paragraph at lines 251--257
 [][]
  []
 
@@ -691,7 +691,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 251--254
 File: users_trades.png Graphic file (type bmp)
 <users_trades.png>
 
-Underfull \hbox (badness 10000) in paragraph at lines 257--260
+Underfull \hbox (badness 10000) in paragraph at lines 261--264
 [][]
  []
 
@@ -699,7 +699,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 257--260
 File: orders.png Graphic file (type bmp)
 <orders.png>
 
-Underfull \hbox (badness 10000) in paragraph at lines 263--266
+Underfull \hbox (badness 10000) in paragraph at lines 267--270
 [][]
  []
 
@@ -707,7 +707,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 263--266
 File: trades.png Graphic file (type bmp)
 <trades.png>
 
-Underfull \hbox (badness 10000) in paragraph at lines 269--272
+Underfull \hbox (badness 10000) in paragraph at lines 273--276
 [][]
  []
 
@@ -720,166 +720,178 @@ Underfull \hbox (badness 10000) in paragraph at lines 269--272
 ]
 فصل 8.
 
-Overfull \hbox (80.85928pt too wide) detected at line 287
+Overfull \hbox (80.85928pt too wide) detected at line 291
 \OML/cmm/m/it/10 transactions\OT1/cmr/m/n/10 ([]\OML/cmm/m/it/10 ; source[]wallet[]id; [] destination[]wallet[]id; fill; wage; date; market[]id\OT1/cmr/m/n/10 )
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 293--296
+Underfull \hbox (badness 10000) in paragraph at lines 297--300
 [][]
  []
 
 
-Overfull \hbox (5.43736pt too wide) in paragraph at lines 293--296
+Overfull \hbox (5.43736pt too wide) in paragraph at lines 297--300
 []\TU/x-nima.ttf(0)/b/n/12 :Anomaly چون ارتباط $\OML/cmm/m/it/12 market[]id \OMS/cmsy/m/n/12 ! \OML/cmm/m/it/12 crypto[]id$\TU/x-nima.ttf(0)/b/n/12 در جدول فروشگاه هم وجود داشت،[]
  []
 
 
-Overfull \hbox (52.70699pt too wide) detected at line 298
+Overfull \hbox (52.70699pt too wide) detected at line 302
 \OML/cmm/m/it/12 orders\OT1/cmr/m/n/12 ([]\OML/cmm/m/it/12 ; sales[]lists[]id; purchase[]lists[]id; is[]sell; state; fill; client[]id;
  []
 
 [27]
-Overfull \hbox (131.18033pt too wide) detected at line 300
+Overfull \hbox (131.18033pt too wide) detected at line 304
 \OML/cmm/m/it/12 F:D \OT1/cmr/m/n/12 = \OMS/cmsy/m/n/12 f\OML/cmm/m/it/12 order[]id \OMS/cmsy/m/n/12 ! \OML/cmm/m/it/12 all attributes; \OT1/cmr/m/n/12 (\OML/cmm/m/it/12 market[]id; is[]sell\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ! \OT1/cmr/m/n/12 (\OML/cmm/m/it/12 sales[]lists[]id; purchase[]lists[]id\OT1/cmr/m/n/12 )\OMS/cmsy/m/n/12 g
  []
 
 
-Overfull \hbox (6.08435pt too wide) in paragraph at lines 300--304
+Overfull \hbox (6.08435pt too wide) in paragraph at lines 304--308
 []\TU/x-nima.ttf(0)/b/n/12 از انجایی که در$\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 market[]id; is[]sell\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ! \OT1/cmr/m/n/12 (\OML/cmm/m/it/12 sales[]lists[]id; purchase[]lists[]id\OT1/cmr/m/n/12 )$[]
  []
 
 
-Overfull \hbox (24.00815pt too wide) in paragraph at lines 300--304
+Overfull \hbox (24.00815pt too wide) in paragraph at lines 304--308
 []\TU/x-nima.ttf(0)/b/n/12 به دو رابطه‌ی $\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 market[]id; is[]sell\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ! \OML/cmm/m/it/12 sales[]lists[]id$ \TU/x-nima.ttf(0)/b/n/12 و $\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 market[]id; is[]sell\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 !$[]
  []
 
 
-Overfull \hbox (15.157pt too wide) detected at line 305
+Overfull \hbox (15.157pt too wide) detected at line 309
 \OML/cmm/m/it/12 orders\OT1/cmr/m/n/12 ([]\OML/cmm/m/it/12 ; is[]sell; state; fill; client[]id; date; market[]id; amount\OT1/cmr/m/n/12 )
  []
 
 
-Overfull \hbox (4.3851pt too wide) detected at line 311
+Overfull \hbox (4.3851pt too wide) detected at line 315
 \OML/cmm/m/it/12 is[]sell  \OT1/cmr/m/n/12 ==  \OML/cmm/m/it/12 FALSE \OT1/cmr/m/n/12 : \OML/cmm/m/it/12 purchase[]table\OT1/cmr/m/n/12 ([]\OML/cmm/m/it/12 ; purchase[]lists[]id\OT1/cmr/m/n/12 )
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 314--317
+Underfull \hbox (badness 10000) in paragraph at lines 318--321
 [][]
  []
 
 
-Overfull \hbox (87.30739pt too wide) in paragraph at lines 319--330
+Overfull \hbox (87.30739pt too wide) in paragraph at lines 323--334
 []$\OML/cmm/m/it/12 trades\OT1/cmr/m/n/12 ([]\OML/cmm/m/it/12 ; date[]placed; fill; wage; value; min[]fill[]remainder; type; market[]id;$ []
  []
 
 
-Overfull \hbox (33.5404pt too wide) in paragraph at lines 319--330
+Overfull \hbox (33.5404pt too wide) in paragraph at lines 323--334
 []$\OML/cmm/m/it/12 taker[]order[]id; maker[]order[]id; taker[]id; maker[]id; broker[]id; admin[]id\OT1/cmr/m/n/12 )$ []
  []
 
 
-Overfull \hbox (66.53427pt too wide) in paragraph at lines 319--330
+Overfull \hbox (66.53427pt too wide) in paragraph at lines 323--334
 []$\OML/cmm/m/it/12 F:D \OT1/cmr/m/n/12 = \OMS/cmsy/m/n/12 f\OML/cmm/m/it/12 trade[]id \OMS/cmsy/m/n/12 ! \OML/cmm/m/it/12 all attribute; taker[]order[]id \OMS/cmsy/m/n/12 ! \OML/cmm/m/it/12 taker[]id; maker[]order[]id \OMS/cmsy/m/n/12 !$[]
  []
 
 
-Overfull \hbox (22.05841pt too wide) in paragraph at lines 319--330
+Overfull \hbox (22.05841pt too wide) in paragraph at lines 323--334
 []\TU/x-nima.ttf(0)/b/n/12 در مرحله‌ی اول ما دو دیپندسی $\OML/cmm/m/it/12 taker[]order[]id \OMS/cmsy/m/n/12 ! \OML/cmm/m/it/12 taker[]id$ \TU/x-nima.ttf(0)/b/n/12 و $\OML/cmm/m/it/12 maker[]order[]id \OMS/cmsy/m/n/12 !$[]
  []
 
 
-Overfull \hbox (3.8223pt too wide) in paragraph at lines 319--330
+Overfull \hbox (3.8223pt too wide) in paragraph at lines 323--334
 []$\OML/cmm/m/it/12 trades\OT1/cmr/m/n/12 ([]\OML/cmm/m/it/12 ; date[]placed; fill; wage; value; min[]fill[]remainder; [] $[]
  []
 
 [28]
-Overfull \hbox (34.93431pt too wide) detected at line 330
+Overfull \hbox (34.93431pt too wide) detected at line 334
 \OML/cmm/m/it/12 p\OT1/cmr/m/n/12 2\OML/cmm/m/it/12 p\OT1/cmr/m/n/12 ([]\OML/cmm/m/it/12 ; date[]placed; fill; wage; value; min[]fill[]remainder; market[]id;
  []
 
 
-Overfull \hbox (18.4683pt too wide) detected at line 333
+Overfull \hbox (18.4683pt too wide) detected at line 337
 \OML/cmm/m/it/12 otc\OT1/cmr/m/n/12 ([]\OML/cmm/m/it/12 ; date[]placed; fill; wage; value; taker[]id; broker[]id; admin[]id\OT1/cmr/m/n/12 )
  []
 
 [29]
-Overfull \hbox (1.07993pt too wide) in paragraph at lines 366--366
+Overfull \hbox (1.07993pt too wide) in paragraph at lines 370--370
 [][]    \TU/lmtt/m/n/12 CREATE INDEX IF NOT EXISTS fill_idx ON orders(fill); []
  []
 
 File: "../../Phase2/SQL Files/Queries/Question1.sql"  (verbatim)
 [30]
+File: sql-res/1.png Graphic file (type bmp)
+<sql-res/1.png>
 File: "../../Phase2/SQL Files/Queries/Question2.sql"  (verbatim)
-
-Overfull \hbox (54.31203pt too wide) in paragraph at lines 386--386
+ [31]
+Overfull \hbox (54.31203pt too wide) in paragraph at lines 396--396
 [][]        \TU/lmtt/m/n/8 LatestTransactions lt ON p.market_id = lt.market_id AND p.date_placed = lt.latest_date[] []
  []
 
-[31]
+File: sql-res/2.jpg Graphic file (type bmp)
+<sql-res/2.jpg>
+[32]
 File: "../../Phase2/SQL Files/Queries/Question3.sql"  (verbatim)
 
-Overfull \hbox (20.32803pt too wide) in paragraph at lines 395--395
+Overfull \hbox (20.32803pt too wide) in paragraph at lines 412--412
 [][]        \TU/lmtt/m/n/8 ROW_NUMBER() OVER (PARTITION BY m.crypto_id ORDER BY p.date_placed DESC) AS rn[] []
  []
 
-[32]
+File: sql-res/3.jpg Graphic file (type bmp)
+<sql-res/3.jpg>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 File: "../../Phase2/SQL Files/Queries/Question4.sql"  (verbatim)
- [33]
+[33] [34]
+File: sql-res/4.jpg Graphic file (type bmp)
+<sql-res/4.jpg>
 File: "../../Phase2/SQL Files/Queries/Question5.sql"  (verbatim)
 
-Overfull \hbox (33.07205pt too wide) in paragraph at lines 413--413
+Overfull \hbox (33.07205pt too wide) in paragraph at lines 444--444
 [][]\TU/lmtt/m/n/8 CREATE OR REPLACE FUNCTION get_best_sell_orders(target_price BIGINT, market_id_param INT)[] []
  []
 
-
-Overfull \hbox (7.58406pt too wide) in paragraph at lines 413--413
+[35]
+Overfull \hbox (7.58406pt too wide) in paragraph at lines 444--444
 [][]            \TU/lmtt/m/n/8 LAG(ro.cumulative_price) OVER (ORDER BY ro.rn) AS prev_cumulative_price[] []
  []
 
-[34]
-Overfull \hbox (62.80804pt too wide) in paragraph at lines 413--413
+
+Overfull \hbox (62.80804pt too wide) in paragraph at lines 444--444
 [][]            \TU/lmtt/m/n/8 OR (ow.cumulative_price > target_price AND ow.prev_cumulative_price <= target_price)[] []
  []
 
-File: "../../Phase2/SQL Files/Queries/Question6.sql"  (verbatim)
 
-Overfull \hbox (67.05605pt too wide) in paragraph at lines 423--423
-[][]\TU/lmtt/m/n/8 CREATE OR REPLACE FUNCTION get_best_volume_sell_orders(target_volume BIGINT, market_id_param INT)[] []
- []
-
-[35]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [36]
+File: sql-res/5.jpg Graphic file (type bmp)
+<sql-res/5.jpg>
+File: "../../Phase2/SQL Files/Queries/Question6.sql"  (verbatim)
+
+Overfull \hbox (67.05605pt too wide) in paragraph at lines 459--459
+[][]\TU/lmtt/m/n/8 CREATE OR REPLACE FUNCTION get_best_volume_sell_orders(target_volume BIGINT, market_id_param INT)[] []
+ []
+
+[37]
+File: sql-res/6.jpg Graphic file (type bmp)
+<sql-res/6.jpg>
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[38]
 File: "../../Phase2/SQL Files/Queries/Question7.sql"  (verbatim)
 
-Overfull \hbox (113.78406pt too wide) in paragraph at lines 433--433
+Overfull \hbox (113.78406pt too wide) in paragraph at lines 478--478
 [][]\TU/lmtt/m/n/8 CREATE OR REPLACE FUNCTION compare_p2p_and_otc(target_volume BIGINT, market_id_param INT, otc_price NUMERIC)[] []
  []
 
 
-Overfull \hbox (135.02405pt too wide) in paragraph at lines 433--433
+Overfull \hbox (135.02405pt too wide) in paragraph at lines 478--478
 [][]                \TU/lmtt/m/n/8 WHEN od.cumulative_volume > target_volume THEN od.amount - (od.cumulative_volume - target_volume)[] []
  []
 
-[37]
-Overfull \hbox (7.58403pt too wide) in paragraph at lines 433--433
+[39]
+Overfull \hbox (7.58403pt too wide) in paragraph at lines 478--478
 [][]            \TU/lmtt/m/n/8 (MAX(fill) * -(SUM(adjusted_amount) - target_volume)) AS weighted_price[] []
  []
 
-
-Overfull \hbox (113.7841pt too wide) in paragraph at lines 433--433
-[][]\TU/lmtt/m/n/8 --the third parameter is the price for over the counter deal asked from the admin in the moment of the sale.[] []
- []
-
-
-Overfull \hbox (113.7841pt too wide) in paragraph at lines 433--433
-[][]\TU/lmtt/m/n/8 --the third parameter is the price for over the counter deal asked from the admin in the moment of the sale.[] []
- []
-
-[38] (./main.aux)
+File: sql-res/7.png Graphic file (type bmp)
+<sql-res/7.png>
+[40] (./main.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -887,12 +899,12 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 298A5F285CD8D53CF0C7508E89D2A184;9850.
  ) 
 Here is how much of TeX's memory you used:
- 15371 strings out of 475882
- 303723 string characters out of 5806027
+ 15429 strings out of 475882
+ 304652 string characters out of 5806027
  753159 words of memory out of 5000000
- 36102 multiletter control sequences out of 15000+600000
+ 36151 multiletter control sequences out of 15000+600000
  477276 words of font info for 99 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 74i,17n,87p,1107b,566s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 74i,17n,87p,1107b,569s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.xdv (38 pages, 297124 bytes).
+Output written on main.xdv (40 pages, 297188 bytes).

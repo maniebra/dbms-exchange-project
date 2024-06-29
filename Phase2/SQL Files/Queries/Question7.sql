@@ -66,15 +66,11 @@ BEGIN
 END;
 $$ LANGUAGE plpgsql;
 
-<<<<<<< HEAD
--- Call the function with your desired parameters
---the third parameter is the price for over the counter deal asked from the admin in the moment of the sale.
-SELECT * FROM compare_p2p_and_otc(100, 1, 1.5);
-=======
 
 
 -- Call the function with your desired parameters
---the third parameter is the price for over the counter deal asked from the admin in the moment of the sale.
+--the third parameter is the price for over the 
+--counter deal asked from the admin in
+-- the moment of the sale.
 
-SELECT * FROM compare_p2p_and_otc(320, 1, 1.5);
->>>>>>> 509580b4540bd21de5f4979b52bb8e9d699ba3a9
+SELECT * FROM compare_p2p_and_otc(110, 1, 1.75);

@@ -903,24 +903,45 @@ INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmtt8.tfm
 INPUT ../../Phase2/SQL Files/Queries/Question1.sql
 INPUT ../../Phase2/SQL Files/Queries/Question1.sql
 INPUT ../../Phase2/SQL Files/Queries/Question1.sql
+INPUT ./sql-res/1.png
+INPUT ./sql-res/1.png
+INPUT sql-res/1.png
 INPUT ../../Phase2/SQL Files/Queries/Question2.sql
 INPUT ../../Phase2/SQL Files/Queries/Question2.sql
 INPUT ../../Phase2/SQL Files/Queries/Question2.sql
+INPUT ./sql-res/2.jpg
+INPUT ./sql-res/2.jpg
+INPUT sql-res/2.jpg
 INPUT ../../Phase2/SQL Files/Queries/Question3.sql
 INPUT ../../Phase2/SQL Files/Queries/Question3.sql
 INPUT ../../Phase2/SQL Files/Queries/Question3.sql
+INPUT ./sql-res/3.jpg
+INPUT ./sql-res/3.jpg
+INPUT sql-res/3.jpg
 INPUT ../../Phase2/SQL Files/Queries/Question4.sql
 INPUT ../../Phase2/SQL Files/Queries/Question4.sql
 INPUT ../../Phase2/SQL Files/Queries/Question4.sql
+INPUT ./sql-res/4.jpg
+INPUT ./sql-res/4.jpg
+INPUT sql-res/4.jpg
 INPUT ../../Phase2/SQL Files/Queries/Question5.sql
 INPUT ../../Phase2/SQL Files/Queries/Question5.sql
 INPUT ../../Phase2/SQL Files/Queries/Question5.sql
+INPUT ./sql-res/5.jpg
+INPUT ./sql-res/5.jpg
+INPUT sql-res/5.jpg
 INPUT ../../Phase2/SQL Files/Queries/Question6.sql
 INPUT ../../Phase2/SQL Files/Queries/Question6.sql
 INPUT ../../Phase2/SQL Files/Queries/Question6.sql
+INPUT ./sql-res/6.jpg
+INPUT ./sql-res/6.jpg
+INPUT sql-res/6.jpg
 INPUT ../../Phase2/SQL Files/Queries/Question7.sql
 INPUT ../../Phase2/SQL Files/Queries/Question7.sql
 INPUT ../../Phase2/SQL Files/Queries/Question7.sql
+INPUT ./sql-res/7.png
+INPUT ./sql-res/7.png
+INPUT sql-res/7.png
 INPUT main.aux
 INPUT ./main.out
 INPUT ./main.out

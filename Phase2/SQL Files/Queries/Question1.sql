@@ -15,5 +15,7 @@ FROM
 JOIN
     orders o ON p.maker_order_id = o.order_id
 JOIN
-    LatestTransactions lt ON p.market_id = lt.market_id AND p.date_placed = lt.latest_date;
+    LatestTransactions lt 
+    ON p.market_id = lt.market_id
+    AND p.date_placed = lt.latest_date;
 	

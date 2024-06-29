@@ -8,6 +8,7 @@
 \usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage{pdfpages}
+\usepackage{verbatim}
 \usepackage{xepersian}
 
 
@@ -315,15 +316,15 @@ $$F.D = \{market\_id \rightarrow purchase\_lists\_id\}$$
 \large{:Anomaly} چون ارتباط $market\_id \rightarrow *\_list\_id$در جدول دفتر سفارشات هم وجود داشت، برای تِغیر دادن ویا حذف کرد یک دفتر شفارش از یک سفارش مجبور بودیم که دو جدول را تغیر دهیم و ممکن بود اطلاعات اشتباه تغیر دهیم ولی در حالت جدید این رابطه فقط در یک جدول وجود دارد  .
 
 \subsection{نرمال کردن جدول \lr{trades}}
-$$ trades (\underline{trade\_id},date\_placed,fill,wage,value,min\_fill\_remainder,type,market\_id,$$
-$$taker\_order\_id,maker\_order\_id,taker\_id,maker\_id,broker\_id,admin\_id)$$
-$$F.D = \{trade\_id \rightarrow all\,attribute, taker\_order\_id \rightarrow taker\_id, maker\_order\_id \rightarrow maker\_id,$$
-$$type \rightarrow (maker\_order\_id, admin\_id, min\_fill\_remainder)\}$$
+$ trades (\underline{trade\_id},date\_placed,fill,wage,value,min\_fill\_remainder,type,market\_id,$\\
+$taker\_order\_id,maker\_order\_id,taker\_id,maker\_id,broker\_id,admin\_id)$\\
+$F.D = \{trade\_id \rightarrow all\,attribute, taker\_order\_id \rightarrow taker\_id, maker\_order\_id \rightarrow maker\_id,$\\
+$type \rightarrow (maker\_order\_id, admin\_id, min\_fill\_remainder)\}$
 \\
-در مرحله‌ی اول ما دو دیپندسی $taker\_order\_id \rightarrow taker\_id$ و $maker\_order\_id \rightarrow maker\_id$باعث می شوند جدول ما در سومین فرم نرمال قرار نگیرد به دلیل مثال قبلی باید در جداولی دیگر قرار می دهیم که این دو جدول هر دو زیر مجموعه از جدول سفارشات هستند که ما نیازی به ساختن آن‌ها نداریم.
-$$ trades (\underline{trade\_id},date\_placed,fill,wage,value,min\_fill\_remainder,type,market\_id,$$
-$$taker\_order\_id,maker\_order\_id,broker\_id,admin\_id)$$
-$$F.D = \{trade\_id \rightarrow all\,attribute, type \rightarrow (maker\_order\_id, admin\_id, min\_fill\_remainder)\}$$
+در مرحله‌ی اول ما دو دیپندسی $taker\_order\_id \rightarrow taker\_id$ و $maker\_order\_id \rightarrow maker\_id$باعث می شوند جدول ما در سومین فرم نرمال قرار نگیرد به دلیل مثال قبلی باید در جداولی دیگر قرار می دهیم که این دو جدول هر دو زیر مجموعه از جدول سفارشات هستند که ما نیازی به ساختن آن‌ها نداریم.\\
+$ trades (\underline{trade\_id},date\_placed,fill,wage,value,min\_fill\_remainder,\\type,market\_id,$\\
+$taker\_order\_id,maker\_order\_id,broker\_id,admin\_id)$\\
+$F.D = \{trade\_id \rightarrow all\,attribute, type \rightarrow (maker\_order\_id,\\ admin\_id, min\_fill\_remainder)\}$
 \\
 رابطه‌ی $type \rightarrow (maker\_order\_id, admin\_id)$ یک دیپندنسی کامل نیست و به طور مثال ما اگر بدانیم که \lr{type == 'otc'} هست می توانیم نتیجه بگیرم که \lr{maker\_order\_id == NULL} می‌باشد و ما پس از مشورت با هد پروژه تصمیم گرفتیم که جدول را برا اساس \lr{type} به دو جدول \lr{p2p} و \lr{otc} تقسیم بکنیم.
 $$ p2p (\underline{p2p\_id},date\_placed,fill,wage,value,min\_fill\_remainder,market\_id,$$
@@ -332,7 +333,7 @@ $$F.D = \{p2p\_id \rightarrow all\,attribute\}$$
 $$ otc (\underline{otc\_id},date\_placed,fill,wage,value,taker\_id, broker\_id,admin\_id)$$
 $$F.D = \{otc\_id \rightarrow all\,attribute\}$$
 
-\large{:Anomaly} در مرحله‌ی اول نرمال سازی همان مشکلات دو تا نرمال سازی قبلی (تغیر دادن و حذف کردن در دو جدول) را برطرف کردیم و در مرحله‌ی دوم اگر جدول تبادلات را به دو جدول کوچکتر تبدیل نمی‌کردیم ان وقت یک جدول بزرگ با حجم زیاد داشتیم که مقدار بعضی از ستون ها در بعضی از سطر ها \lr{NULL} می شد که هم حافظه‌ی زیادی مصرف میکرد و هم کوئری زدن رو کند‌تر می‌کرد.
+{\large\lr{:Anomaly}} در مرحله‌ی اول نرمال سازی همان مشکلات دو تا نرمال سازی قبلی (تغیر دادن و حذف کردن در دو جدول) را برطرف کردیم و در مرحله‌ی دوم اگر جدول تبادلات را به دو جدول کوچکتر تبدیل نمی‌کردیم ان وقت یک جدول بزرگ با حجم زیاد داشتیم که مقدار بعضی از ستون ها در بعضی از سطر ها \lr{NULL} می شد که هم حافظه‌ی زیادی مصرف میکرد و هم کوئری زدن رو کند‌تر می‌کرد.
 
 \section{\lr{index}ها}
 برای سه جدول خود \lr{index} قرار دادیم تا در جستار ها به ما کمک بکند.
@@ -364,6 +365,72 @@ $$F.D = \{otc\_id \rightarrow all\,attribute\}$$
     \begin{verbatim}
     CREATE INDEX IF NOT EXISTS fill_idx ON orders(fill);
     \end{verbatim}
+\end{latin}
+
+\section{جستارهای پایگاه داده}
+
+\subsection{جستار اول}
+
+به صورت زیر بود:
+
+\begin{latin}
+\verbatiminput{../../Phase2/SQL Files/Queries/Question1.sql}
+\end{latin}
+
+\subsection{جستار دوم}
+
+به صورت زیر بود:
+
+\begin{latin}
+    \footnotesize
+\verbatiminput{../../Phase2/SQL Files/Queries/Question2.sql}
+\end{latin}
+
+\subsection{جستار سوم}
+
+به صورت زیر بود:
+
+\begin{latin}
+    \footnotesize
+\verbatiminput{../../Phase2/SQL Files/Queries/Question3.sql}
+\end{latin}
+
+\subsection{جستار چهارم}
+
+به صورت زیر بود:
+
+\begin{latin}
+    \footnotesize
+\verbatiminput{../../Phase2/SQL Files/Queries/Question4.sql}
+\end{latin}
+
+\subsection{جستار پنجم}
+
+به صورت زیر بود:
+
+\begin{latin}
+    \footnotesize
+\verbatiminput{../../Phase2/SQL Files/Queries/Question5.sql}
+\end{latin}
+
+
+\subsection{جستار ششم}
+
+به صورت زیر بود:
+
+\begin{latin}
+    \footnotesize
+\verbatiminput{../../Phase2/SQL Files/Queries/Question6.sql}
+\end{latin}
+
+
+\subsection{جستار هفتم}
+
+به صورت زیر بود:
+
+\begin{latin}
+    \footnotesize
+\verbatiminput{../../Phase2/SQL Files/Queries/Question7.sql}
 \end{latin}
 
 
